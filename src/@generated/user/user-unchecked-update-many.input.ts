@@ -6,7 +6,6 @@ import { NullableFloatFieldUpdateOperationsInput } from '../prisma/nullable-floa
 import { NullableEnumRoleFieldUpdateOperationsInput } from '../prisma/nullable-enum-role-field-update-operations.input';
 
 export class UserUncheckedUpdateManyInput {
-
     id?: StringFieldUpdateOperationsInput;
 
     age?: IntFieldUpdateOperationsInput;

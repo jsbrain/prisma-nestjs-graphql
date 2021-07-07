@@ -1,5 +1,4 @@
 export class UserMaxAggregateInput {
-
     id?: true;
 
     age?: true;

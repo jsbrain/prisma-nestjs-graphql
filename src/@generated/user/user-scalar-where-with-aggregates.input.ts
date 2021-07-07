@@ -6,7 +6,6 @@ import { FloatNullableWithAggregatesFilter } from '../prisma/float-nullable-with
 import { EnumRoleNullableWithAggregatesFilter } from '../prisma/enum-role-nullable-with-aggregates-filter.input';
 
 export class UserScalarWhereWithAggregatesInput {
-
     AND?: Array<UserScalarWhereWithAggregatesInput>;
 
     OR?: Array<UserScalarWhereWithAggregatesInput>;

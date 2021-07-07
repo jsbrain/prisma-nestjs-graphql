@@ -1,5 +1,4 @@
 export class CommentCountAggregate {
-
     id!: number;
 
     createdAt!: number;

@@ -6,7 +6,6 @@ import { CommentMinAggregateInput } from '../comment/comment-min-aggregate.input
 import { CommentMaxAggregateInput } from '../comment/comment-max-aggregate.input';
 
 export class CommentAggregateArgs {
-
     where?: CommentWhereInput;
 
     orderBy?: Array<CommentOrderByWithRelationInput>;

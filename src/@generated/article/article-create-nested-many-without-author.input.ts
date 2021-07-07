@@ -4,7 +4,6 @@ import { ArticleCreateManyAuthorInputEnvelope } from './article-create-many-auth
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleCreateNestedManyWithoutAuthorInput {
-
     create?: Array<ArticleCreateWithoutAuthorInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutAuthorInput>;

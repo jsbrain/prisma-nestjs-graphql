@@ -1,5 +1,4 @@
 export class DummyMinAggregateInput {
-
     id?: true;
 
     created?: true;

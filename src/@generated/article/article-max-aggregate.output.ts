@@ -1,5 +1,4 @@
 export class ArticleMaxAggregate {
-
     id?: string;
 
     slug?: string;

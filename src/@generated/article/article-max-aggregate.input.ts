@@ -1,5 +1,4 @@
 export class ArticleMaxAggregateInput {
-
     id?: true;
 
     slug?: true;

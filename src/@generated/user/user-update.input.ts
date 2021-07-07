@@ -11,7 +11,6 @@ import { ArticleUpdateManyWithoutAuthorInput } from '../article/article-update-m
 import { CommentUpdateManyWithoutAuthorInput } from '../comment/comment-update-many-without-author.input';
 
 export class UserUpdateInput {
-
     id?: StringFieldUpdateOperationsInput;
 
     age?: IntFieldUpdateOperationsInput;

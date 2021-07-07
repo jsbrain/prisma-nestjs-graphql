@@ -1,5 +1,4 @@
 export class UserMinAggregateInput {
-
     id?: true;
 
     age?: true;

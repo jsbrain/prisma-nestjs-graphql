@@ -2,7 +2,6 @@ import { Article } from '../article/article.model';
 import { TagCount } from './tag-count.output';
 
 export class Tag {
-
     id!: string;
 
     name!: string;

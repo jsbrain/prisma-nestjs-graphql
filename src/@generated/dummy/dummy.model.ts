@@ -2,7 +2,6 @@ import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
 import { GraphQLJSON } from 'graphql-type-json';
 
 export class Dummy {
-
     id!: string;
 
     created!: Date;

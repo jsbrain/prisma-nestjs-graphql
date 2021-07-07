@@ -4,7 +4,6 @@ import { UserCreateNestedManyWithoutFavoriteArticlesInput } from '../user/user-c
 import { CommentCreateNestedManyWithoutArticleInput } from '../comment/comment-create-nested-many-without-article.input';
 
 export class ArticleCreateInput {
-
     id?: string;
 
     slug!: string;

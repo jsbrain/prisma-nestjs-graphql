@@ -10,7 +10,6 @@ import { JsonNullableFilter } from '../prisma/json-nullable-filter.input';
 import { StringNullableListFilter } from '../prisma/string-nullable-list-filter.input';
 
 export class DummyWhereInput {
-
     AND?: Array<DummyWhereInput>;
 
     OR?: Array<DummyWhereInput>;

@@ -5,7 +5,6 @@ import { ArticleMinAggregate } from './article-min-aggregate.output';
 import { ArticleMaxAggregate } from './article-max-aggregate.output';
 
 export class AggregateArticle {
-
     _count?: ArticleCountAggregate;
 
     count?: ArticleCountAggregate;

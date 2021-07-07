@@ -3,7 +3,6 @@ import { UserCreateOrConnectWithoutArticlesInput } from './user-create-or-connec
 import { UserWhereUniqueInput } from './user-where-unique.input';
 
 export class UserCreateNestedOneWithoutArticlesInput {
-
     create?: UserCreateWithoutArticlesInput;
 
     connectOrCreate?: UserCreateOrConnectWithoutArticlesInput;

@@ -3,7 +3,6 @@ import { ArticleUpdateWithoutFavoritedByInput } from './article-update-without-f
 import { ArticleCreateWithoutFavoritedByInput } from './article-create-without-favorited-by.input';
 
 export class ArticleUpsertWithWhereUniqueWithoutFavoritedByInput {
-
     where!: ArticleWhereUniqueInput;
 
     update!: ArticleUpdateWithoutFavoritedByInput;

@@ -1,5 +1,4 @@
 export class UserCountAggregateInput {
-
     id?: true;
 
     age?: true;

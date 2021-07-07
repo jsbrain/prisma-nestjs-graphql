@@ -3,7 +3,6 @@ import { UserUpdateWithoutFollowingInput } from './user-update-without-following
 import { UserCreateWithoutFollowingInput } from './user-create-without-following.input';
 
 export class UserUpsertWithWhereUniqueWithoutFollowingInput {
-
     where!: UserWhereUniqueInput;
 
     update!: UserUpdateWithoutFollowingInput;

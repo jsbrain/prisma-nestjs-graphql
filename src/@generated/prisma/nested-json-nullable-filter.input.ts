@@ -1,7 +1,6 @@
 import { GraphQLJSON } from 'graphql-type-json';
 
 export class NestedJsonNullableFilter {
-
     equals?: any;
 
     lt?: any;

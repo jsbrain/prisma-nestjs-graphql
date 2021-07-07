@@ -3,7 +3,6 @@ import { TagCreateOrConnectWithoutArticlesInput } from './tag-create-or-connect-
 import { TagWhereUniqueInput } from './tag-where-unique.input';
 
 export class TagCreateNestedManyWithoutArticlesInput {
-
     create?: Array<TagCreateWithoutArticlesInput>;
 
     connectOrCreate?: Array<TagCreateOrConnectWithoutArticlesInput>;

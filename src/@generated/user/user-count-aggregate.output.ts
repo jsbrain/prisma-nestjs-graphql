@@ -1,5 +1,4 @@
 export class UserCountAggregate {
-
     id!: number;
 
     age!: number;

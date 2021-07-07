@@ -6,7 +6,6 @@ import { UserMinOrderByAggregateInput } from './user-min-order-by-aggregate.inpu
 import { UserSumOrderByAggregateInput } from './user-sum-order-by-aggregate.input';
 
 export class UserOrderByWithAggregationInput {
-
     id?: SortOrder;
 
     age?: SortOrder;

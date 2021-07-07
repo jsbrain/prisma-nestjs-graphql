@@ -7,7 +7,6 @@ import { DummyMinAggregate } from './dummy-min-aggregate.output';
 import { DummyMaxAggregate } from './dummy-max-aggregate.output';
 
 export class DummyGroupBy {
-
     id!: string;
 
     created!: Date | string;

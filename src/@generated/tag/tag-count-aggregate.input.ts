@@ -1,5 +1,4 @@
 export class TagCountAggregateInput {
-
     id?: true;
 
     name?: true;

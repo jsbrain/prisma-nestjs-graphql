@@ -3,7 +3,6 @@ import { CommentMinAggregate } from './comment-min-aggregate.output';
 import { CommentMaxAggregate } from './comment-max-aggregate.output';
 
 export class CommentGroupBy {
-
     id!: string;
 
     createdAt!: Date | string;

@@ -1,5 +1,4 @@
 export class NestedFloatNullableFilter {
-
     equals?: number;
 
     in?: Array<number>;

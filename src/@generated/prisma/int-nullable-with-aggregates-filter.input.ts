@@ -3,7 +3,6 @@ import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { NestedFloatNullableFilter } from './nested-float-nullable-filter.input';
 
 export class IntNullableWithAggregatesFilter {
-
     equals?: number;
 
     in?: Array<number>;

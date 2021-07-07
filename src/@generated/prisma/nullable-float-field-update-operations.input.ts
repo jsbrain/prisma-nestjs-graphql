@@ -1,5 +1,4 @@
 export class NullableFloatFieldUpdateOperationsInput {
-
     set?: number;
 
     increment?: number;

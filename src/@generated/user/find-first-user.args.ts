@@ -4,7 +4,6 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
 import { UserScalarFieldEnum } from './user-scalar-field.enum';
 
 export class FindFirstUserArgs {
-
     where?: UserWhereInput;
 
     orderBy?: Array<UserOrderByWithRelationInput>;

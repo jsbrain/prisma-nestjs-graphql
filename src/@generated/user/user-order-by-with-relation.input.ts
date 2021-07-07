@@ -4,7 +4,6 @@ import { ArticleOrderByRelationAggregateInput } from '../article/article-order-b
 import { CommentOrderByRelationAggregateInput } from '../comment/comment-order-by-relation-aggregate.input';
 
 export class UserOrderByWithRelationInput {
-
     id?: SortOrder;
 
     age?: SortOrder;

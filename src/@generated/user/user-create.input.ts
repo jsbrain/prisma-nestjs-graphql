@@ -8,16 +8,16 @@ import { ArticleCreateNestedManyWithoutAuthorInput } from '../article/article-cr
 import { CommentCreateNestedManyWithoutAuthorInput } from '../comment/comment-create-nested-many-without-author.input';
 
 export class UserCreateInput {
-
     id?: string;
 
-    @Transformer.Type(()=>Number)
+    @Transformer.Type(() => Number)
     age?: number;
 
     email!: string;
 
-    @Validator.MinLength(3) @Validator.MinLength(3)
-    @Validator.MaxLength(50, {message: `Oh no 😱. It's too long!`})
+    @Validator.MinLength(3)
+    @Validator.MinLength(3)
+    @Validator.MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

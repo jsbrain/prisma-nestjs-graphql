@@ -2,7 +2,6 @@ import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-
 import { DateTimeFieldUpdateOperationsInput } from '../prisma/date-time-field-update-operations.input';
 
 export class CommentUncheckedUpdateWithoutArticleInput {
-
     id?: StringFieldUpdateOperationsInput;
 
     createdAt?: DateTimeFieldUpdateOperationsInput;

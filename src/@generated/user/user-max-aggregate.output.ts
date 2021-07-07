@@ -1,7 +1,6 @@
 import { Role } from '../prisma/role.enum';
 
 export class UserMaxAggregate {
-
     id?: string;
 
     age?: number;

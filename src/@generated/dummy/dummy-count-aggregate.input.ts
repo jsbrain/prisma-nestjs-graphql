@@ -1,5 +1,4 @@
 export class DummyCountAggregateInput {
-
     id?: true;
 
     created?: true;

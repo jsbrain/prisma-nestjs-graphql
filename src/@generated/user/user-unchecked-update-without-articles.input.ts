@@ -7,7 +7,6 @@ import { NullableEnumRoleFieldUpdateOperationsInput } from '../prisma/nullable-e
 import { CommentUncheckedUpdateManyWithoutAuthorInput } from '../comment/comment-unchecked-update-many-without-author.input';
 
 export class UserUncheckedUpdateWithoutArticlesInput {
-
     id?: StringFieldUpdateOperationsInput;
 
     age?: IntFieldUpdateOperationsInput;

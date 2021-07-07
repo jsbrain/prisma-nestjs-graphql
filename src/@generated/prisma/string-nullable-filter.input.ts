@@ -2,7 +2,6 @@ import { QueryMode } from './query-mode.enum';
 import { NestedStringNullableFilter } from './nested-string-nullable-filter.input';
 
 export class StringNullableFilter {
-
     equals?: string;
 
     in?: Array<string>;

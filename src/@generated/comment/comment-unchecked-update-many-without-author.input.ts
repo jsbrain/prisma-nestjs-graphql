@@ -8,7 +8,6 @@ import { CommentUpdateManyWithWhereWithoutAuthorInput } from './comment-update-m
 import { CommentScalarWhereInput } from './comment-scalar-where.input';
 
 export class CommentUncheckedUpdateManyWithoutAuthorInput {
-
     create?: Array<CommentCreateWithoutAuthorInput>;
 
     connectOrCreate?: Array<CommentCreateOrConnectWithoutAuthorInput>;

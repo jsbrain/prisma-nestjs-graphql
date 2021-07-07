@@ -3,7 +3,6 @@ import { UserCreateNestedOneWithoutArticlesInput } from '../user/user-create-nes
 import { UserCreateNestedManyWithoutFavoriteArticlesInput } from '../user/user-create-nested-many-without-favorite-articles.input';
 
 export class ArticleCreateWithoutCommentsInput {
-
     id?: string;
 
     slug!: string;

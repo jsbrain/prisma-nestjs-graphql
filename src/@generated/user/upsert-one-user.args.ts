@@ -3,7 +3,6 @@ import { UserCreateInput } from './user-create.input';
 import { UserUpdateInput } from './user-update.input';
 
 export class UpsertOneUserArgs {
-
     where!: UserWhereUniqueInput;
 
     create!: UserCreateInput;

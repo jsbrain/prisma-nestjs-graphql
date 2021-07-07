@@ -4,7 +4,6 @@ import { ArticleWhereUniqueInput } from './article-where-unique.input';
 import { ArticleScalarFieldEnum } from './article-scalar-field.enum';
 
 export class FindManyArticleArgs {
-
     where?: ArticleWhereInput;
 
     orderBy?: Array<ArticleOrderByWithRelationInput>;

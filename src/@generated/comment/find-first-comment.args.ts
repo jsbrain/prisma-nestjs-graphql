@@ -4,7 +4,6 @@ import { CommentWhereUniqueInput } from './comment-where-unique.input';
 import { CommentScalarFieldEnum } from './comment-scalar-field.enum';
 
 export class FindFirstCommentArgs {
-
     where?: CommentWhereInput;
 
     orderBy?: Array<CommentOrderByWithRelationInput>;

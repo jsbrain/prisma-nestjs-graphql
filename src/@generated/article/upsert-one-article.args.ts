@@ -3,7 +3,6 @@ import { ArticleCreateInput } from './article-create.input';
 import { ArticleUpdateInput } from './article-update.input';
 
 export class UpsertOneArticleArgs {
-
     where!: ArticleWhereUniqueInput;
 
     create!: ArticleCreateInput;

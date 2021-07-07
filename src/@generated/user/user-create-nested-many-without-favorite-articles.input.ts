@@ -3,7 +3,6 @@ import { UserCreateOrConnectWithoutFavoriteArticlesInput } from './user-create-o
 import { UserWhereUniqueInput } from './user-where-unique.input';
 
 export class UserCreateNestedManyWithoutFavoriteArticlesInput {
-
     create?: Array<UserCreateWithoutFavoriteArticlesInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFavoriteArticlesInput>;

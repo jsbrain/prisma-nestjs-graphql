@@ -4,7 +4,6 @@ import { NestedIntFilter } from './nested-int-filter.input';
 import { NestedStringFilter } from './nested-string-filter.input';
 
 export class StringWithAggregatesFilter {
-
     equals?: string;
 
     in?: Array<string>;

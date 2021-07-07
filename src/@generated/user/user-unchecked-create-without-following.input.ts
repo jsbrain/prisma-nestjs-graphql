@@ -5,16 +5,16 @@ import { ArticleUncheckedCreateNestedManyWithoutAuthorInput } from '../article/a
 import { CommentUncheckedCreateNestedManyWithoutAuthorInput } from '../comment/comment-unchecked-create-nested-many-without-author.input';
 
 export class UserUncheckedCreateWithoutFollowingInput {
-
     id?: string;
 
-    @Transformer.Type(()=>Number)
+    @Transformer.Type(() => Number)
     age?: number;
 
     email!: string;
 
-    @Validator.MinLength(3) @Validator.MinLength(3)
-    @Validator.MaxLength(50, {message: `Oh no 😱. It's too long!`})
+    @Validator.MinLength(3)
+    @Validator.MinLength(3)
+    @Validator.MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

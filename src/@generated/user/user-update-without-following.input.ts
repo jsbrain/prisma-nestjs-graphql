@@ -10,7 +10,6 @@ import { ArticleUpdateManyWithoutAuthorInput } from '../article/article-update-m
 import { CommentUpdateManyWithoutAuthorInput } from '../comment/comment-update-many-without-author.input';
 
 export class UserUpdateWithoutFollowingInput {
-
     id?: StringFieldUpdateOperationsInput;
 
     age?: IntFieldUpdateOperationsInput;

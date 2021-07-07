@@ -6,7 +6,6 @@ import { FloatNullableFilter } from '../prisma/float-nullable-filter.input';
 import { EnumRoleNullableFilter } from '../prisma/enum-role-nullable-filter.input';
 
 export class UserScalarWhereInput {
-
     AND?: Array<UserScalarWhereInput>;
 
     OR?: Array<UserScalarWhereInput>;

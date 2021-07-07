@@ -7,7 +7,6 @@ import { UserUpdateManyWithWhereWithoutFavoriteArticlesInput } from './user-upda
 import { UserScalarWhereInput } from './user-scalar-where.input';
 
 export class UserUpdateManyWithoutFavoriteArticlesInput {
-
     create?: Array<UserCreateWithoutFavoriteArticlesInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFavoriteArticlesInput>;

@@ -1,7 +1,6 @@
 import { NestedFloatNullableFilter } from './nested-float-nullable-filter.input';
 
 export class FloatNullableFilter {
-
     equals?: number;
 
     in?: Array<number>;

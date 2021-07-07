@@ -3,7 +3,6 @@ import { CommentMinAggregate } from './comment-min-aggregate.output';
 import { CommentMaxAggregate } from './comment-max-aggregate.output';
 
 export class AggregateComment {
-
     _count?: CommentCountAggregate;
 
     count?: CommentCountAggregate;

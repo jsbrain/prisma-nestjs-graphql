@@ -1,7 +1,6 @@
 import { SortOrder } from '../prisma/sort-order.enum';
 
 export class UserCountOrderByAggregateInput {
-
     id?: SortOrder;
 
     age?: SortOrder;

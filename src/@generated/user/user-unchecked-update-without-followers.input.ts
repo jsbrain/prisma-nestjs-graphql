@@ -8,7 +8,6 @@ import { ArticleUncheckedUpdateManyWithoutAuthorInput } from '../article/article
 import { CommentUncheckedUpdateManyWithoutAuthorInput } from '../comment/comment-unchecked-update-many-without-author.input';
 
 export class UserUncheckedUpdateWithoutFollowersInput {
-
     id?: StringFieldUpdateOperationsInput;
 
     age?: IntFieldUpdateOperationsInput;

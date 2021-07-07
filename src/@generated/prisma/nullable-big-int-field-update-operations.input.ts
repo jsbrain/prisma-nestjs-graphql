@@ -1,5 +1,4 @@
 export class NullableBigIntFieldUpdateOperationsInput {
-
     set?: bigint | number;
 
     increment?: bigint | number;

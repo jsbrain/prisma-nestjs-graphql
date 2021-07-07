@@ -9,7 +9,6 @@ import { FloatNullableFilter } from '../prisma/float-nullable-filter.input';
 import { EnumRoleNullableFilter } from '../prisma/enum-role-nullable-filter.input';
 
 export class UserWhereInput {
-
     AND?: Array<UserWhereInput>;
 
     OR?: Array<UserWhereInput>;

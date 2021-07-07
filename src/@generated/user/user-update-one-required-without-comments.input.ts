@@ -5,7 +5,6 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
 import { UserUpdateWithoutCommentsInput } from './user-update-without-comments.input';
 
 export class UserUpdateOneRequiredWithoutCommentsInput {
-
     create?: UserCreateWithoutCommentsInput;
 
     connectOrCreate?: UserCreateOrConnectWithoutCommentsInput;

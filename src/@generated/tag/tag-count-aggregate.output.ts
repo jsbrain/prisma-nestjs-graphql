@@ -1,5 +1,4 @@
 export class TagCountAggregate {
-
     id!: number;
 
     name!: number;

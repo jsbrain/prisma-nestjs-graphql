@@ -1,5 +1,4 @@
 export class CommentCountAggregateInput {
-
     id?: true;
 
     createdAt?: true;

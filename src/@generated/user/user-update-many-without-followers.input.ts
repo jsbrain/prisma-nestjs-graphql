@@ -7,7 +7,6 @@ import { UserUpdateManyWithWhereWithoutFollowersInput } from './user-update-many
 import { UserScalarWhereInput } from './user-scalar-where.input';
 
 export class UserUpdateManyWithoutFollowersInput {
-
     create?: Array<UserCreateWithoutFollowersInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFollowersInput>;

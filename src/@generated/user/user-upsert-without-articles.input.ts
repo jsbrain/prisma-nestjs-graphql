@@ -2,7 +2,6 @@ import { UserUpdateWithoutArticlesInput } from './user-update-without-articles.i
 import { UserCreateWithoutArticlesInput } from './user-create-without-articles.input';
 
 export class UserUpsertWithoutArticlesInput {
-
     update!: UserUpdateWithoutArticlesInput;
 
     create!: UserCreateWithoutArticlesInput;

@@ -6,7 +6,6 @@ import { ArticleMinOrderByAggregateInput } from './article-min-order-by-aggregat
 import { ArticleSumOrderByAggregateInput } from './article-sum-order-by-aggregate.input';
 
 export class ArticleOrderByWithAggregationInput {
-
     id?: SortOrder;
 
     slug?: SortOrder;

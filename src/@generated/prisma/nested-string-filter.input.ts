@@ -1,5 +1,4 @@
 export class NestedStringFilter {
-
     equals?: string;
 
     in?: Array<string>;

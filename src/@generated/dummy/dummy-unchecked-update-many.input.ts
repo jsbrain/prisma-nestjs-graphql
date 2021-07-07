@@ -10,7 +10,6 @@ import { GraphQLJSON } from 'graphql-type-json';
 import { DummyUpdatefriendsInput } from '../prisma/dummy-updatefriends.input';
 
 export class DummyUncheckedUpdateManyInput {
-
     id?: StringFieldUpdateOperationsInput;
 
     created?: DateTimeFieldUpdateOperationsInput;

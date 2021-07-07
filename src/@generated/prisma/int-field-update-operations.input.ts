@@ -1,5 +1,4 @@
 export class IntFieldUpdateOperationsInput {
-
     set?: number;
 
     increment?: number;

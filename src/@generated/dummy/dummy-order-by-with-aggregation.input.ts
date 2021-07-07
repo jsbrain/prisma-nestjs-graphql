@@ -6,7 +6,6 @@ import { DummyMinOrderByAggregateInput } from './dummy-min-order-by-aggregate.in
 import { DummySumOrderByAggregateInput } from './dummy-sum-order-by-aggregate.input';
 
 export class DummyOrderByWithAggregationInput {
-
     id?: SortOrder;
 
     created?: SortOrder;

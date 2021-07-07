@@ -4,7 +4,6 @@ import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { NestedDecimalNullableFilter } from './nested-decimal-nullable-filter.input';
 
 export class DecimalNullableWithAggregatesFilter {
-
     equals?: any;
 
     in?: Array<any>;

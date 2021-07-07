@@ -3,7 +3,6 @@ import { ArticleCreateOrConnectWithoutCommentsInput } from './article-create-or-
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleCreateNestedOneWithoutCommentsInput {
-
     create?: ArticleCreateWithoutCommentsInput;
 
     connectOrCreate?: ArticleCreateOrConnectWithoutCommentsInput;

@@ -7,16 +7,16 @@ import { ArticleCreateNestedManyWithoutFavoritedByInput } from '../article/artic
 import { ArticleCreateNestedManyWithoutAuthorInput } from '../article/article-create-nested-many-without-author.input';
 
 export class UserCreateWithoutCommentsInput {
-
     id?: string;
 
-    @Transformer.Type(()=>Number)
+    @Transformer.Type(() => Number)
     age?: number;
 
     email!: string;
 
-    @Validator.MinLength(3) @Validator.MinLength(3)
-    @Validator.MaxLength(50, {message: `Oh no 😱. It's too long!`})
+    @Validator.MinLength(3)
+    @Validator.MinLength(3)
+    @Validator.MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

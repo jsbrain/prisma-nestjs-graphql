@@ -3,7 +3,6 @@ import { GraphQLJSON } from 'graphql-type-json';
 import { DummyCreatefriendsInput } from '../prisma/dummy-createfriends.input';
 
 export class DummyCreateInput {
-
     id!: string;
 
     created?: Date | string;

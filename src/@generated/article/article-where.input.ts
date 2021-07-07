@@ -8,7 +8,6 @@ import { CommentListRelationFilter } from '../comment/comment-list-relation-filt
 import { BoolNullableFilter } from '../prisma/bool-nullable-filter.input';
 
 export class ArticleWhereInput {
-
     AND?: Array<ArticleWhereInput>;
 
     OR?: Array<ArticleWhereInput>;

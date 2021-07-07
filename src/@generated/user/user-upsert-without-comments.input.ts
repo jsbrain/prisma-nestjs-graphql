@@ -2,7 +2,6 @@ import { UserUpdateWithoutCommentsInput } from './user-update-without-comments.i
 import { UserCreateWithoutCommentsInput } from './user-create-without-comments.input';
 
 export class UserUpsertWithoutCommentsInput {
-
     update!: UserUpdateWithoutCommentsInput;
 
     create!: UserCreateWithoutCommentsInput;

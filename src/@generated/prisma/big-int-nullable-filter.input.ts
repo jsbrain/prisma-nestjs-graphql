@@ -1,7 +1,6 @@
 import { NestedBigIntNullableFilter } from './nested-big-int-nullable-filter.input';
 
 export class BigIntNullableFilter {
-
     equals?: bigint | number;
 
     in?: Array<bigint> | Array<number>;

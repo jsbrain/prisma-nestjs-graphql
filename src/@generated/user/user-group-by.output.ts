@@ -6,7 +6,6 @@ import { UserMinAggregate } from './user-min-aggregate.output';
 import { UserMaxAggregate } from './user-max-aggregate.output';
 
 export class UserGroupBy {
-
     id!: string;
 
     age!: number;

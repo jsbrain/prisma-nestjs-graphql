@@ -2,7 +2,6 @@ import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-
 import { ArticleUpdateManyWithoutTagsInput } from '../article/article-update-many-without-tags.input';
 
 export class TagUpdateInput {
-
     id?: StringFieldUpdateOperationsInput;
 
     name?: StringFieldUpdateOperationsInput;

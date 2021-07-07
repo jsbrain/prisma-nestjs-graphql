@@ -3,7 +3,6 @@ import { DummyCreateInput } from './dummy-create.input';
 import { DummyUpdateInput } from './dummy-update.input';
 
 export class UpsertOneDummyArgs {
-
     where!: DummyWhereUniqueInput;
 
     create!: DummyCreateInput;

@@ -4,7 +4,6 @@ import { Comment } from '../comment/comment.model';
 import { ArticleCount } from './article-count.output';
 
 export class Article {
-
     id!: string;
 
     slug!: string;
