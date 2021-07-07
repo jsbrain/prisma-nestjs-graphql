@@ -13,10 +13,11 @@ import { UserCount } from './user-count.output';
  */
 @Swagger.ApiExtraModels()
 export class User {
+
     /** The id of the user */
     id!: string;
 
-    @Transformer.Type(() => Number)
+    @Transformer.Type(()=>Number)
     age!: number;
 
     /** This is a js doc comment! //
@@ -24,9 +25,8 @@ export class User {
     email!: string;
 
     /** User's name */
-    @Validator.MinLength(3)
-    @Validator.MinLength(3)
-    @Validator.MaxLength(50, { message: `Oh no 😱. It's too long!` })
+    @Validator.MinLength(3) @Validator.MinLength(3)
+    @Validator.MaxLength(50, {message: `Oh no 😱. It's too long!`})
     name!: string;
 
     password!: string;
