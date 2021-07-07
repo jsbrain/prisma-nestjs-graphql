@@ -1,6 +1,6 @@
 {
   "name": "jsbrain-prisma-nestjs-graphql",
-  "version": "0.0.0-dev.2",
+  "version": "0.0.0-dev.4",
   "license": "MIT",
   "description": "Generate object types, inputs, args, etc. from prisma schema file for usage with @nestjs/graphql module",
   "main": "index.js",

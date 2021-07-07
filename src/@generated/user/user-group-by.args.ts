@@ -1,3 +1,4 @@
+import { ApiExtraModels } from '@nestjs/swagger';
 import { UserWhereInput } from './user-where.input';
 import { UserOrderByWithAggregationInput } from './user-order-by-with-aggregation.input';
 import { UserScalarFieldEnum } from './user-scalar-field.enum';
@@ -8,6 +9,12 @@ import { UserSumAggregateInput } from './user-sum-aggregate.input';
 import { UserMinAggregateInput } from './user-min-aggregate.input';
 import { UserMaxAggregateInput } from './user-max-aggregate.input';
 
+/**
+ * User really
+ * With muchos textos
+ * Grande grande ole
+ */
+@ApiExtraModels()
 export class UserGroupByArgs {
     where?: UserWhereInput;
 

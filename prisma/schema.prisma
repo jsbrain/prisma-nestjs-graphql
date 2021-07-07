@@ -29,19 +29,20 @@ generator nestgraphql {
 }
 
 /// User really
-/// @Swagger.ApiExtraModels()
 /// With muchos textos
 /// Grande grande ole
+/// @Swagger.ApiExtraModels()
 model User {
   /// The id of the user
   id               String    @id @default(cuid())
   /// @Transformer.Type(()=>Number)
   age              Int       @default(99) // -> TODO: Default values for dtos not yet supported
-  /// This is a js doc comment! //
+  /// This is a js doc comment!
   /// And we can continue the comment on the next line as well :)
   email            String    @unique
   /// User's name
-  /// @Validator.MinLength(3) @Validator.MinLength(3)
+  /// @Validator.MinLength(3)
+  /// @Validator.MinLength(3)
   /// @Validator.MaxLength(50, {message: `Oh no 😱. It's too long!`})
   name             String    @unique
   // @HideField()

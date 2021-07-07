@@ -1,3 +1,4 @@
+import { ApiExtraModels } from '@nestjs/swagger';
 import { UserCreateWithoutFollowersInput } from './user-create-without-followers.input';
 import { UserCreateOrConnectWithoutFollowersInput } from './user-create-or-connect-without-followers.input';
 import { UserUpsertWithWhereUniqueWithoutFollowersInput } from './user-upsert-with-where-unique-without-followers.input';
@@ -6,6 +7,12 @@ import { UserUpdateWithWhereUniqueWithoutFollowersInput } from './user-update-wi
 import { UserUpdateManyWithWhereWithoutFollowersInput } from './user-update-many-with-where-without-followers.input';
 import { UserScalarWhereInput } from './user-scalar-where.input';
 
+/**
+ * User really
+ * With muchos textos
+ * Grande grande ole
+ */
+@ApiExtraModels()
 export class UserUpdateManyWithoutFollowersInput {
     create?: Array<UserCreateWithoutFollowersInput>;
 

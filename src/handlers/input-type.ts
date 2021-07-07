@@ -1,13 +1,14 @@
 import { ok } from 'assert';
 import JSON5 from 'json5';
 import { castArray, trim } from 'lodash';
-import { ClassDeclarationStructure, StructureKind } from 'ts-morph';
-
+import { ClassDeclarationStructure, DecoratorStructure, StructureKind } from 'ts-morph';
+import { createFieldSettings } from '../helpers/field-settings';
 import { getGraphqlImport } from '../helpers/get-graphql-import';
 import { getGraphqlInputType } from '../helpers/get-graphql-input-type';
 import { getPropertyType } from '../helpers/get-property-type';
 import { ImportDeclarationMap } from '../helpers/import-declaration-map';
 import { propertyStructure } from '../helpers/property-structure';
+import { changeToNamedImport } from '../test/helpers';
 import { EventArguments, InputType } from '../types';
 
 export function inputType(
@@ -27,6 +28,7 @@ export function inputType(
         fieldSettings,
         getModelName,
         models,
+        modelFields,
         removeTypes,
         typeNames,
     } = args;
@@ -70,6 +72,37 @@ export function inputType(
         inputType.name.includes(x.typeName),
     );
 
+    // * -> Enable class decorators for model and make proper docs comment
+    if (model?.documentation) {
+        const { result, documentation } = createFieldSettings({
+            config,
+            text: model.documentation,
+        });
+
+        classStructure.docs = [{ description: documentation }];
+        if (result.length > 0) {
+            classStructure.decorators = result.map(d => {
+                // * -> Create the decorator imports
+
+                const name = d.name.replace(`${d.namespaceImport}.`, '');
+
+                importDeclarations.create({
+                    // * => Create named import for each decorator
+                    name,
+                    from: d.from,
+                    // namespaceImport: d.namespaceImport,
+                    namedImport: true,
+                });
+
+                return {
+                    name, // use de-namespaced name here as well
+                    kind: d.kind as unknown as DecoratorStructure['kind'],
+                    arguments: d.arguments,
+                };
+            });
+        }
+    }
+
     for (const field of inputType.fields) {
         field.inputTypes = field.inputTypes.filter(
             t => !removeTypes.has(String(t.type)),
@@ -103,6 +136,18 @@ export function inputType(
             propertyType,
             isList,
         });
+
+        // * -> Enable jsdoc comments on property
+        if (model) {
+            const modelField = modelFields.get(model.name)?.get(field.name);
+            if (
+                typeof property.leadingTrivia === 'string' &&
+                modelField?.documentation
+            ) {
+                // property.leadingTrivia += `/** ${modelField.documentation} */\n`;
+                property.docs = [modelField.documentation];
+            }
+        }
 
         classStructure.properties?.push(property);
 
@@ -164,6 +209,25 @@ export function inputType(
         //     });
         // }
 
+        /* ---------------------------------- START --------------------------------- */
+
+        // if (typeof property.leadingTrivia === 'string' && field.comment) {
+        //     property.leadingTrivia += `/** ${field.comment} */\n`;
+        // }
+
+        // // classStructure.properties?.push(property);
+
+        // if (propertySettings) {
+        //     importDeclarations.create({ ...propertySettings });
+        // }
+
+        // // Create import for typescript field/property type
+        // if (customType && customType.fieldType && customType.fieldModule) {
+        //     importDeclarations.add(customType.fieldType, customType.fieldModule);
+        // }
+
+        /* ----------------------------------- END ---------------------------------- */
+
         if (settings?.shouldHideField({ name: inputType.name, input: true })) {
             importDeclarations.add('HideField', '@nestjs/graphql');
             property.decorators?.push({ name: 'HideField', arguments: [] });
@@ -185,16 +249,18 @@ export function inputType(
                     if (!options.input || options.kind !== 'Decorator') {
                         continue;
                     }
+                    // * -> Enable named imports and usage for field decorators
+                    const newOptions = changeToNamedImport(options);
                     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                     property.decorators!.push({
-                        name: options.name,
-                        arguments: options.arguments,
+                        name: newOptions.name,
+                        arguments: newOptions.arguments,
                     });
                     ok(
-                        options.from,
+                        newOptions.from,
                         "Missed 'from' part in configuration or field setting",
                     );
-                    importDeclarations.create(options);
+                    importDeclarations.create(newOptions);
                 }
             }
         }

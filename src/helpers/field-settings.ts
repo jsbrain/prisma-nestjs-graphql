@@ -1,6 +1,7 @@
 import JSON5 from 'json5';
 import { merge, trim } from 'lodash';
 import outmatch from 'outmatch';
+
 import { GeneratorConfiguration } from '../types';
 
 export type FieldSetting = {

@@ -1,20 +1,34 @@
-import * as Transformer from 'class-transformer';
-import * as Validator from 'class-validator';
+import { ApiExtraModels } from '@nestjs/swagger';
+import { Type } from 'class-transformer';
+import { MinLength } from 'class-validator';
+import { MaxLength } from 'class-validator';
 import { Role } from '../prisma/role.enum';
 import { ArticleUncheckedCreateNestedManyWithoutAuthorInput } from '../article/article-unchecked-create-nested-many-without-author.input';
 import { CommentUncheckedCreateNestedManyWithoutAuthorInput } from '../comment/comment-unchecked-create-nested-many-without-author.input';
 
+/**
+ * User really
+ * With muchos textos
+ * Grande grande ole
+ */
+@ApiExtraModels()
 export class UserUncheckedCreateInput {
+    /** The id of the user */
     id?: string;
 
-    @Transformer.Type(() => Number)
+    @Type(() => Number)
     age?: number;
 
+    /**
+     * This is a js doc comment!
+     * And we can continue the comment on the next line as well :)
+     */
     email!: string;
 
-    @Validator.MinLength(3)
-    @Validator.MinLength(3)
-    @Validator.MaxLength(50, { message: `Oh no 😱. It's too long!` })
+    /** User's name */
+    @MinLength(3)
+    @MinLength(3)
+    @MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

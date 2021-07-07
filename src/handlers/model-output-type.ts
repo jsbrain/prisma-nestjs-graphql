@@ -12,12 +12,13 @@ import {
     StatementStructures,
     StructureKind,
 } from 'ts-morph';
-import { createFieldSettings } from '../helpers/field-settings';
+import { createFieldSettings, FieldSetting } from '../helpers/field-settings';
 import { getGraphqlImport } from '../helpers/get-graphql-import';
 import { getOutputTypeName } from '../helpers/get-output-type-name';
 import { getPropertyType } from '../helpers/get-property-type';
 import { ImportDeclarationMap } from '../helpers/import-declaration-map';
 import { propertyStructure } from '../helpers/property-structure';
+import { changeToNamedImport } from '../test/helpers';
 import { EventArguments, OutputType } from '../types';
 
 const nestjsGraphql = '@nestjs/graphql';
@@ -81,14 +82,19 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
         if (result.length > 0) {
             classStructure.decorators = result.map(d => {
                 // * -> Create the decorator imports
+
+                const name = d.name.replace(`${d.namespaceImport}.`, '');
+
                 importDeclarations.create({
-                    name: d.name,
+                    // * => Create named import for each decorator
+                    name,
                     from: d.from,
-                    namespaceImport: d.namespaceImport,
+                    // namespaceImport: d.namespaceImport,
+                    namedImport: true,
                 });
 
                 return {
-                    name: d.name,
+                    name, // use de-namespaced name here as well
                     kind: d.kind as unknown as DecoratorStructure['kind'],
                     arguments: d.arguments,
                 };
@@ -211,7 +217,9 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
         });
 
         if (typeof property.leadingTrivia === 'string' && modelField?.documentation) {
-            property.leadingTrivia += `/** ${modelField.documentation} */\n`;
+            // property.leadingTrivia += `/** ${modelField.documentation} */\n`;
+            // ! -> Fix comments
+            property.docs = [modelField.documentation];
         }
 
         classStructure.properties?.push(property);
@@ -253,15 +261,22 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
                 // if (!options.output || options.kind !== 'Decorator') {
                 //     continue;
                 // }
+
+                // property.decorators?.push({
+                //     name: `${options.name}HODI`,
+                //     arguments: options.arguments,
+                // });
+                // * -> Enable named imports and usage for field decorators
+                const newOptions = changeToNamedImport(options);
                 property.decorators?.push({
-                    name: `${options.name}`,
-                    arguments: options.arguments,
+                    name: `${newOptions.name}`,
+                    arguments: newOptions.arguments,
                 });
                 ok(
-                    options.from,
+                    newOptions.from,
                     "Missed 'from' part in configuration or field setting",
                 );
-                importDeclarations.create(options);
+                importDeclarations.create(newOptions);
             }
         }
 
