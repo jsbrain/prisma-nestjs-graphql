@@ -1,7 +1,6 @@
 import JSON5 from 'json5';
 import { merge, trim } from 'lodash';
 import outmatch from 'outmatch';
-
 import { GeneratorConfiguration } from '../types';
 
 export type FieldSetting = {
@@ -99,7 +98,8 @@ export function createFieldSettings(args: {
 
     return {
         result,
-        documentation: documentationLines.filter(Boolean).join('\\n') || undefined,
+        // ! -> join with proper newline
+        documentation: documentationLines.filter(Boolean).join('\n') || undefined,
     };
 }
 

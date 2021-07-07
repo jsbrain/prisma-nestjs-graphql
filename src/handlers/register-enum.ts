@@ -2,8 +2,10 @@ import { ok } from 'assert';
 import {
     CallExpression,
     ExpressionStatement,
+    JSDocStructure,
     Node,
     ObjectLiteralExpression,
+    OptionalKind,
 } from 'ts-morph';
 
 import { generateImport } from '../helpers/generate-import';
@@ -18,16 +20,23 @@ export function registerEnum(enumType: SchemaEnum, args: EventArguments) {
         type: 'enum',
     });
 
-    generateImport({
-        sourceFile,
-        name: 'registerEnumType',
-        moduleSpecifier: '@nestjs/graphql',
-    });
+    // ! -> Disable graphql decorators
+    // generateImport({
+    //     sourceFile,
+    //     name: 'registerEnumType',
+    //     moduleSpecifier: '@nestjs/graphql',
+    // });
 
     if (!sourceFile.getEnum(enumType.name)) {
         sourceFile.addEnum({
             isExported: true,
             name: enumType.name,
+            // * -> Enable enum docs
+            docs: [
+                {
+                    description: dataModelEnum?.documentation,
+                },
+            ],
             members: enumType.values.map(v => ({
                 name: v,
                 initializer: JSON.stringify(v),
@@ -35,35 +44,36 @@ export function registerEnum(enumType: SchemaEnum, args: EventArguments) {
         });
     }
 
-    let statement = sourceFile.getStatement(
-        s =>
-            Node.isExpressionStatement(s) &&
-            Node.isCallExpression(s.getExpression()) &&
-            s
-                .getExpression()
-                .getFirstChild(
-                    node =>
-                        Node.isIdentifier(node) &&
-                        node.getText() === 'registerEnumType',
-                ) != undefined,
-    ) as ExpressionStatement | undefined;
+    // ! -> Disable graphql statements
+    // let statement = sourceFile.getStatement(
+    //     s =>
+    //         Node.isExpressionStatement(s) &&
+    //         Node.isCallExpression(s.getExpression()) &&
+    //         s
+    //             .getExpression()
+    //             .getFirstChild(
+    //                 node =>
+    //                     Node.isIdentifier(node) &&
+    //                     node.getText() === 'registerEnumType',
+    //             ) != undefined,
+    // ) as ExpressionStatement | undefined;
 
-    if (!statement) {
-        [statement] = sourceFile.addStatements([
-            '\n',
-            `registerEnumType(${enumType.name}, { name: '${enumType.name}', description: undefined })`,
-        ]) as ExpressionStatement[];
-    }
+    // if (!statement) {
+    //     [statement] = sourceFile.addStatements([
+    //         '\n',
+    //         `registerEnumType(${enumType.name}, { name: '${enumType.name}', description: undefined })`,
+    //     ]) as ExpressionStatement[];
+    // }
 
-    ok(statement, 'Failed to add registerEnumType statement');
+    // ok(statement, 'Failed to add registerEnumType statement');
 
-    const objectLiteralExpression = (statement.getExpression() as CallExpression)
-        .getArguments()
-        .find(x => Node.isObjectLiteralExpression(x)) as ObjectLiteralExpression;
+    // const objectLiteralExpression = (statement.getExpression() as CallExpression)
+    //     .getArguments()
+    //     .find(x => Node.isObjectLiteralExpression(x)) as ObjectLiteralExpression;
 
-    updateObjectProperty({
-        expression: objectLiteralExpression,
-        name: 'description',
-        value: dataModelEnum?.documentation,
-    });
+    // updateObjectProperty({
+    //     expression: objectLiteralExpression,
+    //     name: 'description',
+    //     value: dataModelEnum?.documentation,
+    // });
 }

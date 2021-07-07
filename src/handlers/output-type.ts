@@ -43,16 +43,18 @@ export function outputType(outputType: OutputType, args: EventArguments) {
         isExported: true,
         name: outputType.name,
         decorators: [
-            {
-                name: 'ObjectType',
-                arguments: [],
-            },
+            // ! -> Disable graphql decorators
+            // {
+            //     name: 'ObjectType',
+            //     arguments: [],
+            // },
         ],
         properties: [],
     };
 
-    importDeclarations.add('Field', nestjsGraphql);
-    importDeclarations.add('ObjectType', nestjsGraphql);
+    // ! -> Disable graphql imports
+    // importDeclarations.add('Field', nestjsGraphql);
+    // importDeclarations.add('ObjectType', nestjsGraphql);
 
     for (const field of outputType.fields) {
         const { location, isList, type } = field.outputType;
@@ -110,7 +112,13 @@ export function outputType(outputType: OutputType, args: EventArguments) {
 
         const graphqlType = graphqlImport.name;
 
-        if (graphqlImport.name !== outputType.name && graphqlImport.specifier) {
+        // if (graphqlImport.name !== outputType.name && graphqlImport.specifier ) {
+        // ! -> Disable graphql imports
+        if (
+            graphqlImport.name !== outputType.name &&
+            graphqlImport.specifier &&
+            graphqlImport.specifier !== '@nestjs/graphql'
+        ) {
             importDeclarations.add(graphqlImport.name, graphqlImport.specifier);
         }
 
@@ -124,15 +132,16 @@ export function outputType(outputType: OutputType, args: EventArguments) {
             property.decorators?.push({ name: 'HideField', arguments: [] });
         } else {
             // Generate `@Field()` decorator
-            property.decorators?.push({
-                name: 'Field',
-                arguments: [
-                    `() => ${isList ? `[${graphqlType}]` : graphqlType}`,
-                    JSON5.stringify({
-                        nullable: Boolean(field.isNullable),
-                    }),
-                ],
-            });
+            // ! -> Disable graphql decorators
+            // property.decorators?.push({
+            //     name: 'Field',
+            //     arguments: [
+            //         `() => ${isList ? `[${graphqlType}]` : graphqlType}`,
+            //         JSON5.stringify({
+            //             nullable: Boolean(field.isNullable),
+            //         }),
+            //     ],
+            // });
 
             if (isCustomsApplicable) {
                 for (const options of settings || []) {

@@ -43,10 +43,11 @@ export function inputType(
         isExported: true,
         name: inputType.name,
         decorators: [
-            {
-                name: classDecoratorName,
-                arguments: [],
-            },
+            // ! -> Disable graphql decorators
+            // {
+            //     name: classDecoratorName,
+            //     arguments: [],
+            // },
         ],
         properties: [],
     };
@@ -54,15 +55,16 @@ export function inputType(
     const model = models.get(modelName);
     const modelFieldSettings = model && fieldSettings.get(model.name);
 
-    importDeclarations
-        .set('Field', {
-            namedImports: [{ name: 'Field' }],
-            moduleSpecifier: '@nestjs/graphql',
-        })
-        .set(classDecoratorName, {
-            namedImports: [{ name: classDecoratorName }],
-            moduleSpecifier: '@nestjs/graphql',
-        });
+    // ! -> Disable graphql imports
+    // importDeclarations
+    //     .set('Field', {
+    //         namedImports: [{ name: 'Field' }],
+    //         moduleSpecifier: '@nestjs/graphql',
+    //     })
+    //     .set(classDecoratorName, {
+    //         namedImports: [{ name: classDecoratorName }],
+    //         moduleSpecifier: '@nestjs/graphql',
+    //     });
 
     const useInputType = config.useInputType.find(x =>
         inputType.name.includes(x.typeName),
@@ -123,11 +125,21 @@ export function inputType(
                 getSourceFile,
             });
 
-            graphqlType = graphqlImport.name;
-
+            // if (
+            //     graphqlImport.name !== inputType.name &&
+            //     graphqlImport.specifier &&
+            //     !importDeclarations.has(graphqlImport.name)
+            // ) {
+            //     importDeclarations.set(graphqlImport.name, {
+            //         namedImports: [{ name: graphqlImport.name }],
+            //         moduleSpecifier: graphqlImport.specifier,
+            //     });
+            // }
             if (
                 graphqlImport.name !== inputType.name &&
                 graphqlImport.specifier &&
+                // ! -> Disable graphql imports
+                graphqlImport.specifier !== '@nestjs/graphql' &&
                 !importDeclarations.has(graphqlImport.name)
             ) {
                 importDeclarations.set(graphqlImport.name, {
@@ -157,15 +169,16 @@ export function inputType(
             property.decorators?.push({ name: 'HideField', arguments: [] });
         } else {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            property.decorators!.push({
-                name: 'Field',
-                arguments: [
-                    `() => ${isList ? `[${graphqlType}]` : graphqlType}`,
-                    JSON5.stringify({
-                        nullable: !isRequired,
-                    }),
-                ],
-            });
+            // ! -> Disable graphql decorators
+            // property.decorators!.push({
+            //     name: 'Field',
+            //     arguments: [
+            //         `() => ${isList ? `[${graphqlType}]` : graphqlType}`,
+            //         JSON5.stringify({
+            //             nullable: !isRequired,
+            //         }),
+            //     ],
+            // });
 
             if (isCustomsApplicable) {
                 for (const options of settings || []) {

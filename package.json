@@ -1,6 +1,6 @@
 {
-  "name": "prisma-nestjs-graphql",
-  "version": "0.0.0-dev",
+  "name": "jsbrain-prisma-nestjs-graphql",
+  "version": "0.0.0-dev.1",
   "license": "MIT",
   "description": "Generate object types, inputs, args, etc. from prisma schema file for usage with @nestjs/graphql module",
   "main": "index.js",
@@ -36,6 +36,7 @@
     "prisma:g": "node node_modules/prisma/build/index.js generate",
     "format": "npx prettier src --write",
     "regen": "rm -rf src/@generated && npm run prisma:g && npm run eslint:fix && npm run format",
+    "regen:quick": "rm -rf src/@generated && npm run prisma:g",
     "example": "ts-node-dev src/example/main.ts",
     "clean_cache": "rm -rf node_modules/.cache",
     "compatibilty_check": "sh Taskfile compatibilty_check",
@@ -47,6 +48,7 @@
     }
   },
   "dependencies": {
+    "@nestjs/swagger": "^4.8.2",
     "@prisma/generator-helper": "^2.26.0",
     "await-event-emitter": "^2.0.2",
     "filenamify": "4",
@@ -58,6 +60,7 @@
     "outmatch": "^0.7.0",
     "pluralize": "^8.0.0",
     "pupa": "^2.1.1",
+    "swagger-ui-express": "^4.1.6",
     "ts-morph": "^11.0.0"
   },
   "peerDependencies": {

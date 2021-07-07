@@ -9,31 +9,42 @@ generator client {
 }
 
 generator nestgraphql {
-  provider = "node -r ts-node/register/transpile-only src/index.ts"
-  output = "../src/@generated"
-  noAtomicOperations = false
-  combineScalarFilters = false
-  reExport = None
-  emitSingle = false
-  emitCompiled = false
-  purgeOutput = false
-  fields_Validator_from = "class-validator"
-  fields_Validator_input = true
-  fields_Scalars_from = "graphql-scalars"
-  fields_Scalars_input = true
+  provider                    = "node -r ts-node/register/transpile-only src/index.ts"
+  output                      = "../src/@generated"
+  noAtomicOperations          = false
+  combineScalarFilters        = false
+  reExport                    = None
+  emitSingle                  = false
+  emitCompiled                = false
+  purgeOutput                 = false
+  fields_Validator_from       = "class-validator"
+  fields_Validator_input      = true
+  fields_Transformer_from     = "class-transformer"
+  fields_Transformer_input    = true
+  fields_Swagger_from         = "@nestjs/swagger"
+  fields_Swagger_input        = true
+  fields_Scalars_from         = "graphql-scalars"
+  fields_Scalars_input        = true
   useInputType_WhereInput_ALL = "WhereInput"
 }
 
 /// User really
+/// @Swagger.ApiExtraModels()
+/// With muchos textos
+/// Grande grande ole
 model User {
+  /// The id of the user
   id               String    @id @default(cuid())
-  /// @FieldType('Scalars.GraphQLEmailAddress')
+  /// @Transformer.Type(()=>Number)
+  age              Int       @default(99) // -> TODO: Default values for dtos not yet supported
+  /// This is a js doc comment! //
+  /// And we can continue the comment on the next line as well :)
   email            String    @unique
   /// User's name
-  /// @Validator.MinLength(3)
-  /// @Validator.MaxLength(50)
+  /// @Validator.MinLength(3) @Validator.MinLength(3)
+  /// @Validator.MaxLength(50, {message: `Oh no 😱. It's too long!`})
   name             String    @unique
-  /// @HideField()
+  // @HideField()
   password         String
   bio              String?
   image            String?
@@ -60,7 +71,7 @@ model Article {
   description    String
   body           String
   tags           Tag[]
-  /// @HideField({ match: '*Create*Input' })
+  // @HideField({ match: '*Create*Input' })
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
   favoritesCount Int       @default(0)
@@ -74,7 +85,7 @@ model Article {
 model Comment {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-  /// @HideField({ match: '*Update*Input' })
+  // @HideField({ match: '*Update*Input' })
   updatedAt DateTime @updatedAt
   body      String
   author    User     @relation(fields: [authorId], references: [id])
@@ -83,8 +94,14 @@ model Comment {
   articleId String?
 }
 
+/// User role 🤷🏻‍♂️
 enum Role {
+  /// The user has default permissions 🙂
+  /// @Validator.IsString()
   USER
+  /// The user has all available permissions 🥳
+  /// @Validator.IsString()
+  ADMIN
 }
 
 model Dummy {

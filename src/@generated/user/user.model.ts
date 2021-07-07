@@ -1,56 +1,55 @@
-import { Field, Float, HideField, ID, Int, ObjectType } from '@nestjs/graphql';
-
+import * as Swagger from '@nestjs/swagger';
+import * as Transformer from 'class-transformer';
+import * as Validator from 'class-validator';
 import { Article } from '../article/article.model';
 import { Comment } from '../comment/comment.model';
 import { Role } from '../prisma/role.enum';
 import { UserCount } from './user-count.output';
 
-/** User really */
-@ObjectType({ description: 'User really' })
+/**
+ * User really
+ * With muchos textos
+ * Grande grande ole
+ */
+@Swagger.ApiExtraModels()
 export class User {
-    @Field(() => ID, { nullable: false })
+    /** The id of the user */
     id!: string;
 
-    @Field(() => String, { nullable: false })
+    @Transformer.Type(() => Number)
+    age!: number;
+
+    /** This is a js doc comment! //
+    And we can continue the comment on the next line as well :) */
     email!: string;
 
     /** User's name */
-    @Field(() => String, { nullable: false, description: "User's name" })
+    @Validator.MinLength(3)
+    @Validator.MinLength(3)
+    @Validator.MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
-    @HideField()
     password!: string;
 
-    @Field(() => String, { nullable: true })
     bio!: string | null;
 
-    @Field(() => String, { nullable: true })
     image!: string | null;
 
-    @Field(() => [User], { nullable: true })
     following!: Array<User>;
 
-    @Field(() => [User], { nullable: true })
     followers!: Array<User>;
 
-    @Field(() => [Article], { nullable: true })
     favoriteArticles!: Array<Article>;
 
-    @Field(() => [Article], { nullable: true })
     articles!: Array<Article>;
 
-    @Field(() => [Comment], { nullable: true })
     comments!: Array<Comment>;
 
-    @Field(() => Int, { nullable: true })
     countComments!: number | null;
 
-    @Field(() => Float, { nullable: true })
     rating!: number | null;
 
-    @Field(() => Role, { nullable: true })
     role!: Role | null;
 
-    @Field(() => UserCount, { nullable: true })
     _count!: UserCount;
 }

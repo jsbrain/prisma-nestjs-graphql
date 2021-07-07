@@ -1,35 +1,28 @@
-import { Field, ObjectType } from '@nestjs/graphql';
-
-import { ArticleAvgAggregate } from './article-avg-aggregate.output';
 import { ArticleCountAggregate } from './article-count-aggregate.output';
-import { ArticleMaxAggregate } from './article-max-aggregate.output';
-import { ArticleMinAggregate } from './article-min-aggregate.output';
+import { ArticleAvgAggregate } from './article-avg-aggregate.output';
 import { ArticleSumAggregate } from './article-sum-aggregate.output';
+import { ArticleMinAggregate } from './article-min-aggregate.output';
+import { ArticleMaxAggregate } from './article-max-aggregate.output';
 
-@ObjectType()
 export class AggregateArticle {
-    @Field(() => ArticleCountAggregate, { nullable: true })
-    count?: ArticleCountAggregate;
-    @Field(() => ArticleAvgAggregate, { nullable: true })
-    avg?: ArticleAvgAggregate;
-    @Field(() => ArticleSumAggregate, { nullable: true })
-    sum?: ArticleSumAggregate;
-    @Field(() => ArticleMinAggregate, { nullable: true })
-    min?: ArticleMinAggregate;
-    @Field(() => ArticleMaxAggregate, { nullable: true })
-    max?: ArticleMaxAggregate;
-    @Field(() => ArticleCountAggregate, { nullable: true })
+
     _count?: ArticleCountAggregate;
 
-    @Field(() => ArticleAvgAggregate, { nullable: true })
+    count?: ArticleCountAggregate;
+
     _avg?: ArticleAvgAggregate;
 
-    @Field(() => ArticleSumAggregate, { nullable: true })
+    avg?: ArticleAvgAggregate;
+
     _sum?: ArticleSumAggregate;
 
-    @Field(() => ArticleMinAggregate, { nullable: true })
+    sum?: ArticleSumAggregate;
+
     _min?: ArticleMinAggregate;
 
-    @Field(() => ArticleMaxAggregate, { nullable: true })
+    min?: ArticleMinAggregate;
+
     _max?: ArticleMaxAggregate;
+
+    max?: ArticleMaxAggregate;
 }

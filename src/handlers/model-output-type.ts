@@ -4,6 +4,7 @@ import { castArray, remove, trim } from 'lodash';
 import {
     ClassDeclarationStructure,
     CommentStatement,
+    DecoratorStructure,
     ExportSpecifierStructure,
     ImportDeclarationStructure,
     ImportSpecifierStructure,
@@ -11,7 +12,7 @@ import {
     StatementStructures,
     StructureKind,
 } from 'ts-morph';
-
+import { createFieldSettings } from '../helpers/field-settings';
 import { getGraphqlImport } from '../helpers/get-graphql-import';
 import { getOutputTypeName } from '../helpers/get-output-type-name';
 import { getPropertyType } from '../helpers/get-property-type';
@@ -58,37 +59,66 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
             isExported: true,
             name: outputType.name,
             decorators: [
-                {
-                    name: 'ObjectType',
-                    arguments: [],
-                },
+                // ! -> Disable graphql decorators
+                // {
+                //     name: 'ObjectType',
+                //     arguments: [],
+                // },
             ],
             properties: [],
         };
         (sourceFileStructure.statements as StatementStructures[]).push(classStructure);
     }
 
-    const decorator = classStructure.decorators?.find(d => d.name === 'ObjectType');
-    ok(decorator, 'ObjectType decorator not found');
-    const decoratorArgument = decorator.arguments?.[0]
-        ? JSON5.parse(decorator.arguments[0])
-        : {};
+    // * -> Enable class decorators for model and make proper docs comment
     if (model.documentation) {
-        if (!classStructure.leadingTrivia) {
-            classStructure.leadingTrivia = `/** ${model.documentation} */\n`;
+        const { result, documentation } = createFieldSettings({
+            config,
+            text: model.documentation,
+        });
+
+        classStructure.docs = [{ description: documentation }];
+        if (result.length > 0) {
+            classStructure.decorators = result.map(d => {
+                // * -> Create the decorator imports
+                importDeclarations.create({
+                    name: d.name,
+                    from: d.from,
+                    namespaceImport: d.namespaceImport,
+                });
+
+                return {
+                    name: d.name,
+                    kind: d.kind as unknown as DecoratorStructure['kind'],
+                    arguments: d.arguments,
+                };
+            });
         }
-        decoratorArgument.description = model.documentation;
-    } else {
-        delete decoratorArgument.description;
     }
 
-    decorator.arguments =
-        Object.keys(decoratorArgument).length > 0
-            ? [JSON5.stringify(decoratorArgument)]
-            : [];
+    // ! -> Disable graphql decorators
+    // const decorator = classStructure.decorators?.find(d => d.name === 'ObjectType');
+    // ok(decorator, 'ObjectType decorator not found');
+    // const decoratorArgument = decorator.arguments?.[0]
+    //     ? JSON5.parse(decorator.arguments[0])
+    //     : {};
+    // if (model.documentation) {
+    //     if (!classStructure.leadingTrivia) {
+    //         classStructure.leadingTrivia = `/** ${model.documentation} */\n`;
+    //     }
+    //     decoratorArgument.description = model.documentation;
+    // } else {
+    //     delete decoratorArgument.description;
+    // }
 
-    importDeclarations.add('Field', nestjsGraphql);
-    importDeclarations.add('ObjectType', nestjsGraphql);
+    // decorator.arguments =
+    //     Object.keys(decoratorArgument).length > 0
+    //         ? [JSON5.stringify(decoratorArgument)]
+    //         : [];
+
+    // ! -> Disable graphql decorators
+    // importDeclarations.add('Field', nestjsGraphql);
+    // importDeclarations.add('ObjectType', nestjsGraphql);
 
     for (const field of outputType.fields) {
         // if (model.name === 'Comment') {
@@ -148,7 +178,13 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
 
             graphqlType = graphqlImport.name;
 
-            if (graphqlImport.name !== outputType.name && graphqlImport.specifier) {
+            // if (graphqlImport.name !== outputType.name && graphqlImport.specifier) {
+            if (
+                graphqlImport.name !== outputType.name &&
+                graphqlImport.specifier &&
+                // ! -> Disable graphql imports
+                graphqlImport.specifier !== '@nestjs/graphql'
+            ) {
                 importDeclarations.add(graphqlImport.name, graphqlImport.specifier);
             }
         }
@@ -193,28 +229,32 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
             importDeclarations.add('HideField', nestjsGraphql);
             property.decorators?.push({ name: 'HideField', arguments: [] });
         } else {
-            property.decorators?.push({
-                name: 'Field',
-                arguments: [
-                    `() => ${isList ? `[${graphqlType}]` : graphqlType}`,
-                    JSON5.stringify({
-                        nullable: Boolean(field.isNullable),
-                        defaultValue: ['number', 'string', 'boolean'].includes(
-                            typeof modelField?.default,
-                        )
-                            ? modelField?.default
-                            : undefined,
-                        description: modelField?.documentation,
-                    }),
-                ],
-            });
+            // ! -> Disable graphql decorators
+            // property.decorators?.push({
+            //     name: 'Field',
+            //     arguments: [
+            //         `() => ${isList ? `[${graphqlType}]` : graphqlType}`,
+            //         JSON5.stringify({
+            //             nullable: Boolean(field.isNullable),
+            //             defaultValue: ['number', 'string', 'boolean'].includes(
+            //                 typeof modelField?.default,
+            //             )
+            //                 ? modelField?.default
+            //                 : undefined,
+            //             description: modelField?.documentation
+            //             // ! -> Can be used to remove newline but it actually prints out in docs just fine.
+            //             // description: modelField?.documentation?.replace('\n', ' '),
+            //         }),
+            //     ],
+            // });
 
             for (const options of settings || []) {
-                if (!options.output || options.kind !== 'Decorator') {
-                    continue;
-                }
+                // ! -> Enable decorators in model
+                // if (!options.output || options.kind !== 'Decorator') {
+                //     continue;
+                // }
                 property.decorators?.push({
-                    name: options.name,
+                    name: `${options.name}`,
                     arguments: options.arguments,
                 });
                 ok(
