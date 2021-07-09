@@ -9,23 +9,116 @@ generator client {
 }
 
 generator nestgraphql {
-  provider                    = "node -r ts-node/register/transpile-only src/index.ts"
-  output                      = "../src/@generated"
-  noAtomicOperations          = false
-  combineScalarFilters        = false
-  reExport                    = None
-  emitSingle                  = false
-  emitCompiled                = false
-  purgeOutput                 = false
-  fields_Validator_from       = "class-validator"
-  fields_Validator_input      = true
-  fields_Transformer_from     = "class-transformer"
-  fields_Transformer_input    = true
-  fields_Swagger_from         = "@nestjs/swagger"
-  fields_Swagger_input        = true
-  fields_Scalars_from         = "graphql-scalars"
-  fields_Scalars_input        = true
-  useInputType_WhereInput_ALL = "WhereInput"
+  provider                     = "node -r ts-node/register/transpile-only src/index.ts"
+  output                       = "../src/@generated"
+  noAtomicOperations           = false
+  combineScalarFilters         = false
+  reExport                     = None
+  emitSingle                   = false
+  emitCompiled                 = false
+  purgeOutput                  = false
+  fields_Validator_from        = "class-validator"
+  fields_Validator_input       = true
+  fields_Validator_output      = true
+  fields_Validator_namedImport = true
+  fields_Helpers_from          = "./helpers/transforms.dto.ts"
+  fields_Helpers_input         = true
+  fields_Helpers_output        = true
+  fields_Helpers_importOnly    = true
+  fields_Helpers_namedImport   = true
+  fields_Transformer_from      = "class-transformer"
+  fields_Transformer_input     = true
+  fields_Transformer_output    = true
+  fields_Swagger_from          = "@nestjs/swagger"
+  fields_Swagger_input         = true
+  fields_Scalars_from          = "graphql-scalars"
+  fields_Scalars_input         = true
+  useInputType_WhereInput_ALL  = "WhereInput"
+}
+
+/// Notification model to display relevant notifications.
+/// Generally works for various models. Includes utility methods.
+/// ```ts
+/// const note = new Notification({...})
+/// if (timeout && !note.seen) {
+///   // Notification has not been seen in x days, repin it
+///   note.repin()
+/// }
+/// ```
+model Notification {
+  /// @Transformer.Type(() => String)
+  /// @Validator.IsString()
+  id    String    @id @default(cuid())
+  /// Timestamp when note has been seen/recognized 📝.
+  /// Input can be Date or valid date string but will always be transformed to Date.
+  /// @Helpers.dateKindTransform() // -> use to only import stuff
+  /// @Transformer.Transform(dateKindTransform)
+  /// @Validator.IsDate({message:`$property must be a Date instance or valid ISO8601 date string`})
+  seen  DateTime?
+  /// Notification title. @example Your report is ready 🥳
+  /// @Transformer.Type(() => String)
+  /// @Validator.IsString()
+  title String
+
+
+
+
+  text String
+
+  /// Additional metadata that should be included to the note, like 'from UserXY' etc.
+  /// @PropertyType({ name: 'JsonObject', from: 'type-fest', namedImport: true })
+  meta String
+
+
+  // FIXME: Finish description!
+  /// Additional data being sent with the note. Limited to
+  /// @PropertyType({ name: 'JsonObject', from: 'type-fest', namedImport: true })
+  data Json?
+
+}
+
+/// NOTE: We currently do not need, neither support user.
+/// This user model is soely for demonstration and testing purposes.
+/// @default - false
+model SuperUser {
+  /// @Transformer.Type(() => String)
+  /// @Validator.IsString()
+  id           String  @id @default(cuid())
+  /// Valid email for each user 📧. @unique
+  /// @Transformer.Type(() => String)
+  /// @Validator.IsString()
+  /// @Validator.IsEmail()
+  email        String  @unique
+  /// Secure password 🛂
+  // To omit the field in the generated output dto:
+  /// @Transformer.Exclude()
+  /// @Transformer.Type(() => String)
+  /// @Validator.IsString()
+  password     String
+  /// Users name including all pre and surnames. @example John Doe
+  /// @Transformer.Type(() => String)
+  /// @Validator.IsAlphanumeric()
+  /// @Validator.MinLength(4,{message: `Wow ... that's a short name!`})
+  /// @Validator.MaxLength(32,{message: `Oh no 😱. It's too long!`})
+  /// @Validator.IsOptional()
+  name         String?
+  /// Users age. @example 28
+  /// @Transformer.Type(() => Number)
+  /// @Validator.IsInt()
+  /// @Validator.IsPositive()
+  /// @Validator.Min(3)
+  /// @Validator.Max(99, {message: `Wait ... I think you're way to old 🤔`})
+  /// @Validator.IsOptional()
+  age          Int?
+  /// Random number string to test value conversion etc. @example test123
+  /// @Transformer.Type(() => Number)
+  /// @Validator.IsInt()
+  /// @Validator.IsPositive()
+  /// @Validator.IsOptional()
+  numberString Int?    @default(10)
+  /// The role of the user for RBAC.
+  /// @Validator.IsEnum(Role)
+  role         Role
 }
 
 /// User really

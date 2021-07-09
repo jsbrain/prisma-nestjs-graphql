@@ -1,3 +1,5 @@
+import * as Transformer from 'class-transformer';
+import * as Validator from 'class-validator';
 import { Role } from '../prisma/role.enum';
 import { UserCountAggregate } from './user-count-aggregate.output';
 import { UserAvgAggregate } from './user-avg-aggregate.output';
@@ -8,10 +10,14 @@ import { UserMaxAggregate } from './user-max-aggregate.output';
 export class UserGroupBy {
     id!: string;
 
+    @Transformer.Type(() => Number)
     age!: number;
 
     email!: string;
 
+    @Validator.MinLength(3)
+    @Validator.MinLength(3)
+    @Validator.MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

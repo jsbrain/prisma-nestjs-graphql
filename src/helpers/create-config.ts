@@ -2,7 +2,6 @@ import filenamify from 'filenamify';
 import { unflatten } from 'flat';
 import { Dictionary, merge, trim } from 'lodash';
 import { Nullable } from 'simplytyped';
-
 import { ReExport } from '../handlers/re-export';
 import { FieldSetting, TypeRecord } from '../types';
 
@@ -47,6 +46,8 @@ export function createConfig(data: Record<string, unknown>) {
         )
             .filter(({ 1: value }) => typeof value === 'object')
             .map(([name, value]) => {
+                console.log('value', value);
+
                 const fieldSetting: ConfigFieldSetting = {
                     arguments: [],
                     output: toBoolean(value.output),
@@ -56,6 +57,7 @@ export function createConfig(data: Record<string, unknown>) {
                         ? true
                         : value.defaultImport,
                     namespaceImport: value.namespaceImport,
+                    importOnly: toBoolean(value.importOnly),
                 };
                 return [name, fieldSetting];
             }),

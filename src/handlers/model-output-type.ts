@@ -151,6 +151,7 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
         const propertySettings = settings?.getPropertyType();
 
         const propertyType = castArray(
+            // propertySettings.name can be skipped now if `importOnly` flag is set
             propertySettings?.name ||
                 customType?.fieldType?.split('|').map(trim) ||
                 getPropertyType({
@@ -163,6 +164,8 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
         propertyType.splice(1, propertyType.length);
 
         if (field.isNullable && !isList && ['enumTypes', 'scalar'].includes(location)) {
+            // TODO: Maybe remove ...
+            // NOTE: type | null for model is defined here!
             propertyType.push('null');
         }
 
@@ -257,21 +260,31 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
             // });
 
             for (const options of settings || []) {
-                // ! -> Enable decorators in model
                 // if (!options.output || options.kind !== 'Decorator') {
-                //     continue;
-                // }
+                // Only apply for Decorators and if output option is specified
+                if (!options.output || options.kind !== 'Decorator') {
+                    continue;
+                }
 
                 // property.decorators?.push({
-                //     name: `${options.name}HODI`,
+                //     name: `${options.name}`,
                 //     arguments: options.arguments,
                 // });
+
                 // * -> Enable named imports and usage for field decorators
                 const newOptions = changeToNamedImport(options);
-                property.decorators?.push({
-                    name: `${newOptions.name}`,
-                    arguments: newOptions.arguments,
-                });
+
+                if (model.name === 'Notification') {
+                    console.log('newOptions', newOptions);
+                }
+
+                // * -> Skip importOnly:true decorators but still apply imports
+                if (!newOptions.importOnly) {
+                    property.decorators?.push({
+                        name: `${newOptions.name}`,
+                        arguments: newOptions.arguments,
+                    });
+                }
                 ok(
                     newOptions.from,
                     "Missed 'from' part in configuration or field setting",

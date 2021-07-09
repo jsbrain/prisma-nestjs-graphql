@@ -1,7 +1,6 @@
 import JSON5 from 'json5';
 import { merge, trim } from 'lodash';
 import outmatch from 'outmatch';
-
 import { GeneratorConfiguration } from '../types';
 
 export type FieldSetting = {
@@ -19,6 +18,13 @@ export type FieldSetting = {
     defaultImport?: string | true;
     namespaceImport?: string;
     namedImport?: boolean;
+    // * New field to enable named utility imports that don't act as types
+    /**
+     * Can be used to specify a required import via @PropertyType({..., importOnly: true})
+     * that doesn't act as a type but needs to imported, e.g. a custom validation function
+     * for @Transform(myCustomValidationFunction).
+     */
+    importOnly?: boolean;
 };
 
 export class FieldSettings extends Array<FieldSetting> {

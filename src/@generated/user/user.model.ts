@@ -1,6 +1,7 @@
 import { ApiExtraModels } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { MaxLength, MinLength } from 'class-validator';
+import { MinLength } from 'class-validator';
+import { MaxLength } from 'class-validator';
 import { Article } from '../article/article.model';
 import { Comment } from '../comment/comment.model';
 import { Role } from '../prisma/role.enum';
