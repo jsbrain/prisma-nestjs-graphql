@@ -21,14 +21,14 @@ generator nestgraphql {
   fields_Validator_input       = true
   fields_Validator_output      = true
   fields_Validator_namedImport = true
+  fields_Transformer_from      = "class-transformer"
+  fields_Transformer_input     = true
+  fields_Transformer_output    = true
   fields_Helpers_from          = "./helpers/transforms.dto.ts"
   fields_Helpers_input         = true
   fields_Helpers_output        = true
   fields_Helpers_importOnly    = true
   fields_Helpers_namedImport   = true
-  fields_Transformer_from      = "class-transformer"
-  fields_Transformer_input     = true
-  fields_Transformer_output    = true
   fields_Swagger_from          = "@nestjs/swagger"
   fields_Swagger_input         = true
   fields_Scalars_from          = "graphql-scalars"

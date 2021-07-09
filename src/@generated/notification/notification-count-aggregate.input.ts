@@ -1,5 +1,3 @@
-import { JsonObject } from 'type-fest';
-
 /**
  * Notification model to display relevant notifications.
  * Generally works for various models. Includes utility methods.
@@ -26,7 +24,7 @@ export class NotificationCountAggregateInput {
     text?: true;
 
     /** Additional metadata that should be included to the note, like 'from UserXY' etc. */
-    meta?: JsonObject;
+    meta?: true;
 
     /** Additional data being sent with the note. Limited to */
     data?: true;

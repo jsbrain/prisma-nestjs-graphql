@@ -1,6 +1,5 @@
 import { StringFilter } from '../prisma/string-filter.input';
 import { DateTimeNullableFilter } from '../prisma/date-time-nullable-filter.input';
-import { JsonObject } from 'type-fest';
 import { JsonNullableFilter } from '../prisma/json-nullable-filter.input';
 
 /**
@@ -35,7 +34,7 @@ export class NotificationWhereInput {
     text?: StringFilter;
 
     /** Additional metadata that should be included to the note, like 'from UserXY' etc. */
-    meta?: JsonObject;
+    meta?: StringFilter;
 
     /** Additional data being sent with the note. Limited to */
     data?: JsonNullableFilter;

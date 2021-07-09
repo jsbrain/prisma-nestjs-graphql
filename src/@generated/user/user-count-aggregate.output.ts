@@ -1,13 +1,19 @@
-import * as Transformer from 'class-transformer';
+import { Type } from 'class-transformer';
 
 export class UserCountAggregate {
+    /** The id of the user */
     id!: number;
 
-    @Transformer.Type(() => Number)
+    @Type(() => Number)
     age!: number;
 
+    /**
+     * This is a js doc comment!
+     * And we can continue the comment on the next line as well :)
+     */
     email!: number;
 
+    /** User's name */
     name!: number;
 
     password!: number;

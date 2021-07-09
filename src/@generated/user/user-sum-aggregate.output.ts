@@ -1,7 +1,7 @@
-import * as Transformer from 'class-transformer';
+import { Type } from 'class-transformer';
 
 export class UserSumAggregate {
-    @Transformer.Type(() => Number)
+    @Type(() => Number)
     age?: number;
 
     countComments?: number;

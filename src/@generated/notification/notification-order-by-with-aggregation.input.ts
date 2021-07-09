@@ -1,5 +1,4 @@
 import { SortOrder } from '../prisma/sort-order.enum';
-import { JsonObject } from 'type-fest';
 import { NotificationCountOrderByAggregateInput } from './notification-count-order-by-aggregate.input';
 import { NotificationMaxOrderByAggregateInput } from './notification-max-order-by-aggregate.input';
 import { NotificationMinOrderByAggregateInput } from './notification-min-order-by-aggregate.input';
@@ -30,7 +29,7 @@ export class NotificationOrderByWithAggregationInput {
     text?: SortOrder;
 
     /** Additional metadata that should be included to the note, like 'from UserXY' etc. */
-    meta?: JsonObject;
+    meta?: SortOrder;
 
     /** Additional data being sent with the note. Limited to */
     data?: SortOrder;

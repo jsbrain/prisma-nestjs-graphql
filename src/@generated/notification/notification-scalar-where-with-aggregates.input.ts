@@ -1,6 +1,5 @@
 import { StringWithAggregatesFilter } from '../prisma/string-with-aggregates-filter.input';
 import { DateTimeNullableWithAggregatesFilter } from '../prisma/date-time-nullable-with-aggregates-filter.input';
-import { JsonObject } from 'type-fest';
 import { JsonNullableWithAggregatesFilter } from '../prisma/json-nullable-with-aggregates-filter.input';
 
 /**
@@ -35,7 +34,7 @@ export class NotificationScalarWhereWithAggregatesInput {
     text?: StringWithAggregatesFilter;
 
     /** Additional metadata that should be included to the note, like 'from UserXY' etc. */
-    meta?: JsonObject;
+    meta?: StringWithAggregatesFilter;
 
     /** Additional data being sent with the note. Limited to */
     data?: JsonNullableWithAggregatesFilter;

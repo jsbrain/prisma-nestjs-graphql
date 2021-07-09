@@ -251,11 +251,19 @@ export function inputType(
                     }
                     // * -> Enable named imports and usage for field decorators
                     const newOptions = changeToNamedImport(options);
+                    // * -> Skip importOnly:true decorators but still apply imports
+                    if (!newOptions.importOnly) {
+                        property.decorators?.push({
+                            name: newOptions.name,
+                            arguments: newOptions.arguments,
+                        });
+                    }
                     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                    property.decorators!.push({
-                        name: newOptions.name,
-                        arguments: newOptions.arguments,
-                    });
+                    // property.decorators!.push({
+                    //     name: newOptions.name,
+                    //     arguments: newOptions.arguments,
+                    // });
+
                     ok(
                         newOptions.from,
                         "Missed 'from' part in configuration or field setting",

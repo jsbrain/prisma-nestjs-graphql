@@ -1,5 +1,4 @@
 import { SortOrder } from '../prisma/sort-order.enum';
-import { JsonObject } from 'type-fest';
 
 /**
  * Notification model to display relevant notifications.
@@ -27,7 +26,7 @@ export class NotificationCountOrderByAggregateInput {
     text?: SortOrder;
 
     /** Additional metadata that should be included to the note, like 'from UserXY' etc. */
-    meta?: JsonObject;
+    meta?: SortOrder;
 
     /** Additional data being sent with the note. Limited to */
     data?: SortOrder;

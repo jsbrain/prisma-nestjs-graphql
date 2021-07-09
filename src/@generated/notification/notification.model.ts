@@ -1,7 +1,9 @@
-import { Transform, Type } from 'class-transformer';
-import { IsDate, IsString } from 'class-validator';
-import { JsonObject } from 'type-fest';
+import { Type } from 'class-transformer';
+import { IsString } from 'class-validator';
 import { dateKindTransform } from './helpers/transforms.dto.ts';
+import { Transform } from 'class-transformer';
+import { IsDate } from 'class-validator';
+import { JsonObject } from 'type-fest';
 
 /**
  * Notification model to display relevant notifications.
@@ -37,7 +39,7 @@ export class Notification {
     text!: string;
 
     /** Additional metadata that should be included to the note, like 'from UserXY' etc. */
-    meta!: JsonObject;
+    meta!: string;
 
     /** Additional data being sent with the note. Limited to */
     data!: any | null;

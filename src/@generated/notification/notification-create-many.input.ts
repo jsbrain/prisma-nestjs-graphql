@@ -25,7 +25,6 @@ export class NotificationCreateManyInput {
      * Timestamp when note has been seen/recognized 📝.
      * Input can be Date or valid date string but will always be transformed to Date.
      */
-    @dateKindTransform()
     @Transform(dateKindTransform)
     @IsDate({
         message: `$property must be a Date instance or valid ISO8601 date string`,
@@ -40,7 +39,7 @@ export class NotificationCreateManyInput {
     text!: string;
 
     /** Additional metadata that should be included to the note, like 'from UserXY' etc. */
-    meta!: JsonObject;
+    meta!: string;
 
     /** Additional data being sent with the note. Limited to */
     data?: any;

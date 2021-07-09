@@ -1,5 +1,6 @@
-import * as Transformer from 'class-transformer';
-import * as Validator from 'class-validator';
+import { Type } from 'class-transformer';
+import { MinLength } from 'class-validator';
+import { MaxLength } from 'class-validator';
 import { Role } from '../prisma/role.enum';
 import { UserCountAggregate } from './user-count-aggregate.output';
 import { UserAvgAggregate } from './user-avg-aggregate.output';
@@ -8,16 +9,22 @@ import { UserMinAggregate } from './user-min-aggregate.output';
 import { UserMaxAggregate } from './user-max-aggregate.output';
 
 export class UserGroupBy {
+    /** The id of the user */
     id!: string;
 
-    @Transformer.Type(() => Number)
+    @Type(() => Number)
     age!: number;
 
+    /**
+     * This is a js doc comment!
+     * And we can continue the comment on the next line as well :)
+     */
     email!: string;
 
-    @Validator.MinLength(3)
-    @Validator.MinLength(3)
-    @Validator.MaxLength(50, { message: `Oh no 😱. It's too long!` })
+    /** User's name */
+    @MinLength(3)
+    @MinLength(3)
+    @MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

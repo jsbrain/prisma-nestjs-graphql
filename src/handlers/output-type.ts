@@ -2,19 +2,26 @@ import { ok } from 'assert';
 import JSON5 from 'json5';
 import { castArray, trim } from 'lodash';
 import { ClassDeclarationStructure, StructureKind } from 'ts-morph';
-
 import { getGraphqlImport } from '../helpers/get-graphql-import';
 import { getOutputTypeName } from '../helpers/get-output-type-name';
 import { getPropertyType } from '../helpers/get-property-type';
 import { ImportDeclarationMap } from '../helpers/import-declaration-map';
 import { propertyStructure } from '../helpers/property-structure';
+import { changeToNamedImport } from '../test/helpers';
 import { EventArguments, OutputType } from '../types';
 
 const nestjsGraphql = '@nestjs/graphql';
 
 export function outputType(outputType: OutputType, args: EventArguments) {
-    const { getSourceFile, models, config, eventEmitter, fieldSettings, getModelName } =
-        args;
+    const {
+        getSourceFile,
+        models,
+        modelFields,
+        config,
+        eventEmitter,
+        fieldSettings,
+        getModelName,
+    } = args;
     const importDeclarations = new ImportDeclarationMap();
 
     const fileType = 'output';
@@ -94,6 +101,18 @@ export function outputType(outputType: OutputType, args: EventArguments) {
             isList,
         });
 
+        // * -> Enable jsdoc comments on property
+        if (model) {
+            const modelField = modelFields.get(model.name)?.get(field.name);
+            if (
+                typeof property.leadingTrivia === 'string' &&
+                modelField?.documentation
+            ) {
+                // property.leadingTrivia += `/** ${modelField.documentation} */\n`;
+                property.docs = [modelField.documentation];
+            }
+        }
+
         classStructure.properties?.push(property);
 
         if (propertySettings) {
@@ -148,15 +167,20 @@ export function outputType(outputType: OutputType, args: EventArguments) {
                     if (!options.output || options.kind !== 'Decorator') {
                         continue;
                     }
-                    property.decorators?.push({
-                        name: options.name,
-                        arguments: options.arguments,
-                    });
+                    // * -> Enable named imports and usage for field decorators
+                    const newOptions = changeToNamedImport(options);
+                    // * -> Skip importOnly:true decorators but still apply imports
+                    if (!newOptions.importOnly) {
+                        property.decorators?.push({
+                            name: newOptions.name,
+                            arguments: newOptions.arguments,
+                        });
+                    }
                     ok(
-                        options.from,
+                        newOptions.from,
                         "Missed 'from' part in configuration or field setting",
                     );
-                    importDeclarations.create(options);
+                    importDeclarations.create(newOptions);
                 }
             }
         }

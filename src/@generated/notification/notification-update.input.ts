@@ -28,7 +28,7 @@ export class NotificationUpdateInput {
     text?: StringFieldUpdateOperationsInput;
 
     /** Additional metadata that should be included to the note, like 'from UserXY' etc. */
-    meta?: JsonObject;
+    meta?: StringFieldUpdateOperationsInput;
 
     /** Additional data being sent with the note. Limited to */
     data?: any;
