@@ -274,10 +274,6 @@ export function modelOutputType(outputType: OutputType, args: EventArguments) {
                 // * -> Enable named imports and usage for field decorators
                 const newOptions = changeToNamedImport(options);
 
-                if (model.name === 'Notification') {
-                    console.log('newOptions', newOptions);
-                }
-
                 // * -> Skip importOnly:true decorators but still apply imports
                 if (!newOptions.importOnly) {
                     property.decorators?.push({

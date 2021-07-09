@@ -1,8 +1,10 @@
-import { Transform, Type } from 'class-transformer';
-import { IsDate, IsString } from 'class-validator';
-import { GraphQLJSON } from 'graphql-type-json';
-import { JsonObject } from 'type-fest';
+import { Type } from 'class-transformer';
+import { IsString } from 'class-validator';
 import { dateKindTransform } from './helpers/transforms.dto.ts';
+import { Transform } from 'class-transformer';
+import { IsDate } from 'class-validator';
+import { JsonObject } from 'type-fest';
+import { GraphQLJSON } from 'graphql-type-json';
 
 /**
  * Notification model to display relevant notifications.
