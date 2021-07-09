@@ -1,10 +1,7 @@
-import { Type } from 'class-transformer';
-import { IsString } from 'class-validator';
-import { dateKindTransform } from './helpers/transforms.dto.ts';
-import { Transform } from 'class-transformer';
-import { IsDate } from 'class-validator';
+import { Transform, Type } from 'class-transformer';
+import { IsDate, IsString } from 'class-validator';
 import { JsonObject } from 'type-fest';
-import { GraphQLJSON } from 'graphql-type-json';
+import { dateKindTransform } from './helpers/transforms.dto.ts';
 
 /**
  * Notification model to display relevant notifications.
@@ -43,5 +40,5 @@ export class Notification {
     meta!: JsonObject;
 
     /** Additional data being sent with the note. Limited to */
-    data!: JsonObject | null;
+    data!: any | null;
 }

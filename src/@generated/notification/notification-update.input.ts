@@ -1,7 +1,6 @@
 import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-operations.input';
 import { NullableDateTimeFieldUpdateOperationsInput } from '../prisma/nullable-date-time-field-update-operations.input';
 import { JsonObject } from 'type-fest';
-import { GraphQLJSON } from 'graphql-type-json';
 
 /**
  * Notification model to display relevant notifications.
@@ -32,5 +31,5 @@ export class NotificationUpdateInput {
     meta?: JsonObject;
 
     /** Additional data being sent with the note. Limited to */
-    data?: JsonObject;
+    data?: any;
 }

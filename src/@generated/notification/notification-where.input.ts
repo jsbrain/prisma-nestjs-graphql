@@ -38,5 +38,5 @@ export class NotificationWhereInput {
     meta?: JsonObject;
 
     /** Additional data being sent with the note. Limited to */
-    data?: JsonObject;
+    data?: JsonNullableFilter;
 }

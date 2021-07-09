@@ -4,7 +4,6 @@ import { dateKindTransform } from './helpers/transforms.dto.ts';
 import { Transform } from 'class-transformer';
 import { IsDate } from 'class-validator';
 import { JsonObject } from 'type-fest';
-import { GraphQLJSON } from 'graphql-type-json';
 
 /**
  * Notification model to display relevant notifications.
@@ -44,5 +43,5 @@ export class NotificationCreateInput {
     meta!: JsonObject;
 
     /** Additional data being sent with the note. Limited to */
-    data?: JsonObject;
+    data?: any;
 }

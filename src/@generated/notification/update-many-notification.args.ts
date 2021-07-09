@@ -1,4 +1,3 @@
-import { JsonObject } from 'type-fest';
 import { NotificationUpdateManyMutationInput } from './notification-update-many-mutation.input';
 import { NotificationWhereInput } from './notification-where.input';
 
@@ -15,7 +14,7 @@ import { NotificationWhereInput } from './notification-where.input';
  */
 export class UpdateManyNotificationArgs {
     /** Additional data being sent with the note. Limited to */
-    data!: JsonObject;
+    data!: NotificationUpdateManyMutationInput;
 
     where?: NotificationWhereInput;
 }

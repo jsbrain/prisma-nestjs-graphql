@@ -1,4 +1,3 @@
-import { JsonObject } from 'type-fest';
 import { NotificationCreateManyInput } from './notification-create-many.input';
 
 /**
@@ -14,7 +13,7 @@ import { NotificationCreateManyInput } from './notification-create-many.input';
  */
 export class CreateManyNotificationArgs {
     /** Additional data being sent with the note. Limited to */
-    data!: Array<JsonObject>;
+    data!: Array<NotificationCreateManyInput>;
 
     skipDuplicates?: boolean;
 }

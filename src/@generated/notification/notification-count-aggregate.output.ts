@@ -11,7 +11,7 @@ export class NotificationCountAggregate {
 
     meta!: JsonObject;
 
-    data!: JsonObject;
+    data!: number;
 
     _all!: number;
 }

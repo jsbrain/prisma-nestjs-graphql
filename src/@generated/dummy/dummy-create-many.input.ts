@@ -1,5 +1,5 @@
 import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
-import { GraphQLJSON } from 'graphql-type-json';
+import { JsonObject } from 'type-fest';
 import { DummyCreateManyfriendsInput } from './dummy-create-manyfriends.input';
 
 export class DummyCreateManyInput {

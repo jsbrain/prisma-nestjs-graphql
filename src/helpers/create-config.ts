@@ -46,8 +46,6 @@ export function createConfig(data: Record<string, unknown>) {
         )
             .filter(({ 1: value }) => typeof value === 'object')
             .map(([name, value]) => {
-                console.log('value', value);
-
                 const fieldSetting: ConfigFieldSetting = {
                     arguments: [],
                     output: toBoolean(value.output),

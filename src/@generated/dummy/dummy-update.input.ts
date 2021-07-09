@@ -6,7 +6,7 @@ import { NullableFloatFieldUpdateOperationsInput } from '../prisma/nullable-floa
 import { NullableBytesFieldUpdateOperationsInput } from '../prisma/nullable-bytes-field-update-operations.input';
 import { NullableDecimalFieldUpdateOperationsInput } from '../prisma/nullable-decimal-field-update-operations.input';
 import { NullableBigIntFieldUpdateOperationsInput } from '../prisma/nullable-big-int-field-update-operations.input';
-import { GraphQLJSON } from 'graphql-type-json';
+import { JsonObject } from 'type-fest';
 import { DummyUpdatefriendsInput } from '../prisma/dummy-updatefriends.input';
 
 export class DummyUpdateInput {

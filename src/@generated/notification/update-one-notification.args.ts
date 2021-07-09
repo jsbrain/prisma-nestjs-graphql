@@ -1,4 +1,3 @@
-import { JsonObject } from 'type-fest';
 import { NotificationUpdateInput } from './notification-update.input';
 import { NotificationWhereUniqueInput } from './notification-where-unique.input';
 
@@ -15,7 +14,7 @@ import { NotificationWhereUniqueInput } from './notification-where-unique.input'
  */
 export class UpdateOneNotificationArgs {
     /** Additional data being sent with the note. Limited to */
-    data!: JsonObject;
+    data!: NotificationUpdateInput;
 
     where!: NotificationWhereUniqueInput;
 }

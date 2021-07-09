@@ -1,4 +1,4 @@
-import { GraphQLJSON } from 'graphql-type-json';
+import { JsonObject } from 'type-fest';
 
 export class JsonNullableFilter {
     equals?: any;

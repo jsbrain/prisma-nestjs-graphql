@@ -2,7 +2,6 @@ import * as Transformer from 'class-transformer';
 import * as Validator from 'class-validator';
 import * as Helpers from './helpers/transforms.dto.ts';
 import { JsonObject } from 'type-fest';
-import { GraphQLJSON } from 'graphql-type-json';
 import { NotificationCountAggregate } from './notification-count-aggregate.output';
 import { NotificationMinAggregate } from './notification-min-aggregate.output';
 import { NotificationMaxAggregate } from './notification-max-aggregate.output';
@@ -27,7 +26,7 @@ export class NotificationGroupBy {
 
     meta!: JsonObject;
 
-    data?: JsonObject;
+    data?: any;
 
     _count?: NotificationCountAggregate;
 

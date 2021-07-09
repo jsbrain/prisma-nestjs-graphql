@@ -1,5 +1,5 @@
 import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
-import { GraphQLJSON } from 'graphql-type-json';
+import { JsonObject } from 'type-fest';
 import { DummyCountAggregate } from './dummy-count-aggregate.output';
 import { DummyAvgAggregate } from './dummy-avg-aggregate.output';
 import { DummySumAggregate } from './dummy-sum-aggregate.output';

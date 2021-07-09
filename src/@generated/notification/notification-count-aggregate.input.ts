@@ -29,7 +29,7 @@ export class NotificationCountAggregateInput {
     meta?: JsonObject;
 
     /** Additional data being sent with the note. Limited to */
-    data?: JsonObject;
+    data?: true;
 
     _all?: true;
 }

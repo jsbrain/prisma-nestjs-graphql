@@ -60,19 +60,13 @@ model Notification {
   /// @Validator.IsString()
   title String
 
-
-
-
   text String
 
   /// Additional metadata that should be included to the note, like 'from UserXY' etc.
-  /// @PropertyType({ name: 'JsonObject', from: 'type-fest', namedImport: true })
   meta String
-
 
   // FIXME: Finish description!
   /// Additional data being sent with the note. Limited to
-  /// @PropertyType({ name: 'JsonObject', from: 'type-fest', namedImport: true })
   data Json?
 
 }
