@@ -1,4 +1,5 @@
 import { PropertyDeclaration, SourceFile } from 'ts-morph';
+
 import { FieldSetting } from '../helpers/field-settings';
 
 export function getFieldOptions(

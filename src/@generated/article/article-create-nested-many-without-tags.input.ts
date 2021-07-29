@@ -3,6 +3,7 @@ import { ArticleCreateOrConnectWithoutTagsInput } from './article-create-or-conn
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleCreateNestedManyWithoutTagsInput {
+
     create?: Array<ArticleCreateWithoutTagsInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutTagsInput>;

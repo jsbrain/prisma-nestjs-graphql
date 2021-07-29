@@ -3,6 +3,7 @@ import { TagMinAggregate } from './tag-min-aggregate.output';
 import { TagMaxAggregate } from './tag-max-aggregate.output';
 
 export class AggregateTag {
+
     _count?: TagCountAggregate;
 
     count?: TagCountAggregate;

@@ -7,6 +7,7 @@ import { ArticleUpdateManyWithWhereWithoutFavoritedByInput } from './article-upd
 import { ArticleScalarWhereInput } from './article-scalar-where.input';
 
 export class ArticleUpdateManyWithoutFavoritedByInput {
+
     create?: Array<ArticleCreateWithoutFavoritedByInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutFavoritedByInput>;

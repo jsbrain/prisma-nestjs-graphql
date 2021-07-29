@@ -9,6 +9,7 @@ import { UserUpdateWithoutFavoriteArticlesInput } from './user-update-without-fa
  */
 @ApiExtraModels()
 export class UserUpdateWithWhereUniqueWithoutFavoriteArticlesInput {
+
     where!: UserWhereUniqueInput;
 
     data!: UserUpdateWithoutFavoriteArticlesInput;

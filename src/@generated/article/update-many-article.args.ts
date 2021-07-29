@@ -2,6 +2,7 @@ import { ArticleUpdateManyMutationInput } from './article-update-many-mutation.i
 import { ArticleWhereInput } from './article-where.input';
 
 export class UpdateManyArticleArgs {
+
     data!: ArticleUpdateManyMutationInput;
 
     where?: ArticleWhereInput;

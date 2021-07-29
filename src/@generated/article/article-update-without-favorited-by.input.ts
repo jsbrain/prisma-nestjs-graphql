@@ -7,6 +7,7 @@ import { UserUpdateOneRequiredWithoutArticlesInput } from '../user/user-update-o
 import { CommentUpdateManyWithoutArticleInput } from '../comment/comment-update-many-without-article.input';
 
 export class ArticleUpdateWithoutFavoritedByInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     slug?: StringFieldUpdateOperationsInput;

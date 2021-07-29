@@ -1,6 +1,7 @@
 import { CommentUncheckedCreateNestedManyWithoutArticleInput } from '../comment/comment-unchecked-create-nested-many-without-article.input';
 
 export class ArticleUncheckedCreateWithoutFavoritedByInput {
+
     id?: string;
 
     slug!: string;

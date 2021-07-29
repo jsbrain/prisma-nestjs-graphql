@@ -4,6 +4,7 @@ import { UserUpdateOneRequiredWithoutCommentsInput } from '../user/user-update-o
 import { ArticleUpdateOneWithoutCommentsInput } from '../article/article-update-one-without-comments.input';
 
 export class CommentUpdateInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     createdAt?: DateTimeFieldUpdateOperationsInput;

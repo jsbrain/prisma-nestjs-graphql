@@ -9,6 +9,7 @@ import { ArticleMinAggregateInput } from './article-min-aggregate.input';
 import { ArticleMaxAggregateInput } from './article-max-aggregate.input';
 
 export class ArticleGroupByArgs {
+
     where?: ArticleWhereInput;
 
     orderBy?: Array<ArticleOrderByWithAggregationInput>;

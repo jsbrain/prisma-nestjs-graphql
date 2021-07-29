@@ -4,6 +4,7 @@ import { CommentMaxOrderByAggregateInput } from './comment-max-order-by-aggregat
 import { CommentMinOrderByAggregateInput } from './comment-min-order-by-aggregate.input';
 
 export class CommentOrderByWithAggregationInput {
+
     id?: SortOrder;
 
     createdAt?: SortOrder;

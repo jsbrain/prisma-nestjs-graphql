@@ -9,6 +9,7 @@ import { UserUpdateWithoutFollowingInput } from './user-update-without-following
  */
 @ApiExtraModels()
 export class UserUpdateWithWhereUniqueWithoutFollowingInput {
+
     where!: UserWhereUniqueInput;
 
     data!: UserUpdateWithoutFollowingInput;

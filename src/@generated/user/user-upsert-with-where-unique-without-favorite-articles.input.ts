@@ -10,6 +10,7 @@ import { UserCreateWithoutFavoriteArticlesInput } from './user-create-without-fa
  */
 @ApiExtraModels()
 export class UserUpsertWithWhereUniqueWithoutFavoriteArticlesInput {
+
     where!: UserWhereUniqueInput;
 
     update!: UserUpdateWithoutFavoriteArticlesInput;

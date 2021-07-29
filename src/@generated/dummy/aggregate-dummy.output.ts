@@ -5,6 +5,7 @@ import { DummyMinAggregate } from './dummy-min-aggregate.output';
 import { DummyMaxAggregate } from './dummy-max-aggregate.output';
 
 export class AggregateDummy {
+
     _count?: DummyCountAggregate;
 
     count?: DummyCountAggregate;

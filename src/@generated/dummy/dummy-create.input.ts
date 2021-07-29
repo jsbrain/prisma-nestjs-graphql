@@ -1,8 +1,8 @@
 import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
-import { JsonObject } from 'type-fest';
 import { DummyCreatefriendsInput } from '../prisma/dummy-createfriends.input';
 
 export class DummyCreateInput {
+
     id!: string;
 
     created?: Date | string;

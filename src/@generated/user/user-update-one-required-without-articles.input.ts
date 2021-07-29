@@ -12,6 +12,7 @@ import { UserUpdateWithoutArticlesInput } from './user-update-without-articles.i
  */
 @ApiExtraModels()
 export class UserUpdateOneRequiredWithoutArticlesInput {
+
     create?: UserCreateWithoutArticlesInput;
 
     connectOrCreate?: UserCreateOrConnectWithoutArticlesInput;

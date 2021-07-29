@@ -8,6 +8,7 @@ import { UserCreateManyInput } from './user-create-many.input';
  */
 @ApiExtraModels()
 export class CreateManyUserArgs {
+
     data!: Array<UserCreateManyInput>;
 
     skipDuplicates?: boolean;

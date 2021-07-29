@@ -12,6 +12,7 @@ import {
     StatementStructures,
     StructureKind,
 } from 'ts-morph';
+
 import { createFieldSettings, FieldSetting } from '../helpers/field-settings';
 import { getGraphqlImport } from '../helpers/get-graphql-import';
 import { getOutputTypeName } from '../helpers/get-output-type-name';

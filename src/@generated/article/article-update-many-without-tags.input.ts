@@ -7,6 +7,7 @@ import { ArticleUpdateManyWithWhereWithoutTagsInput } from './article-update-man
 import { ArticleScalarWhereInput } from './article-scalar-where.input';
 
 export class ArticleUpdateManyWithoutTagsInput {
+
     create?: Array<ArticleCreateWithoutTagsInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutTagsInput>;

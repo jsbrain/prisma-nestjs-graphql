@@ -4,6 +4,7 @@ import { DummyWhereUniqueInput } from './dummy-where-unique.input';
 import { DummyScalarFieldEnum } from './dummy-scalar-field.enum';
 
 export class FindManyDummyArgs {
+
     where?: DummyWhereInput;
 
     orderBy?: Array<DummyOrderByWithRelationInput>;

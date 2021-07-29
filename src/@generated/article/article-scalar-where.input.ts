@@ -4,6 +4,7 @@ import { IntFilter } from '../prisma/int-filter.input';
 import { BoolNullableFilter } from '../prisma/bool-nullable-filter.input';
 
 export class ArticleScalarWhereInput {
+
     AND?: Array<ArticleScalarWhereInput>;
 
     OR?: Array<ArticleScalarWhereInput>;

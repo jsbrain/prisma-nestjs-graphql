@@ -7,6 +7,7 @@ import { TagUpdateManyWithWhereWithoutArticlesInput } from './tag-update-many-wi
 import { TagScalarWhereInput } from './tag-scalar-where.input';
 
 export class TagUpdateManyWithoutArticlesInput {
+
     create?: Array<TagCreateWithoutArticlesInput>;
 
     connectOrCreate?: Array<TagCreateOrConnectWithoutArticlesInput>;

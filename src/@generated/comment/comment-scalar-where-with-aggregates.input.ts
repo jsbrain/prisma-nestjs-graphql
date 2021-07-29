@@ -3,6 +3,7 @@ import { DateTimeWithAggregatesFilter } from '../prisma/date-time-with-aggregate
 import { StringNullableWithAggregatesFilter } from '../prisma/string-nullable-with-aggregates-filter.input';
 
 export class CommentScalarWhereWithAggregatesInput {
+
     AND?: Array<CommentScalarWhereWithAggregatesInput>;
 
     OR?: Array<CommentScalarWhereWithAggregatesInput>;

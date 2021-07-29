@@ -11,6 +11,7 @@ import { CommentOrderByRelationAggregateInput } from '../comment/comment-order-b
  */
 @ApiExtraModels()
 export class UserOrderByWithRelationInput {
+
     /** The id of the user */
     id?: SortOrder;
 

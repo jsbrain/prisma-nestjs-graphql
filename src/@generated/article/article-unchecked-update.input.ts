@@ -5,6 +5,7 @@ import { NullableBoolFieldUpdateOperationsInput } from '../prisma/nullable-bool-
 import { CommentUncheckedUpdateManyWithoutArticleInput } from '../comment/comment-unchecked-update-many-without-article.input';
 
 export class ArticleUncheckedUpdateInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     slug?: StringFieldUpdateOperationsInput;

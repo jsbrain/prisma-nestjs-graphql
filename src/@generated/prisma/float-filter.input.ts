@@ -1,6 +1,7 @@
 import { NestedFloatFilter } from './nested-float-filter.input';
 
 export class FloatFilter {
+
     equals?: number;
 
     in?: Array<number>;

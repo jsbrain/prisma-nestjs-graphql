@@ -1,4 +1,5 @@
 export class ArticleCountAggregateInput {
+
     id?: true;
 
     slug?: true;

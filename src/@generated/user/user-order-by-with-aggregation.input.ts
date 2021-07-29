@@ -13,6 +13,7 @@ import { UserSumOrderByAggregateInput } from './user-sum-order-by-aggregate.inpu
  */
 @ApiExtraModels()
 export class UserOrderByWithAggregationInput {
+
     /** The id of the user */
     id?: SortOrder;
 

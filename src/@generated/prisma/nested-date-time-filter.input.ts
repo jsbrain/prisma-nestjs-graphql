@@ -1,4 +1,5 @@
 export class NestedDateTimeFilter {
+
     equals?: Date | string;
 
     in?: Array<Date> | Array<string>;

@@ -1,4 +1,5 @@
 export class CommentMaxAggregateInput {
+
     id?: true;
 
     createdAt?: true;

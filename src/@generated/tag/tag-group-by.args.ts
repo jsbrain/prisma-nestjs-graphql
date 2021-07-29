@@ -7,6 +7,7 @@ import { TagMinAggregateInput } from './tag-min-aggregate.input';
 import { TagMaxAggregateInput } from './tag-max-aggregate.input';
 
 export class TagGroupByArgs {
+
     where?: TagWhereInput;
 
     orderBy?: Array<TagOrderByWithAggregationInput>;

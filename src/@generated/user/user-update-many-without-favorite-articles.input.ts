@@ -14,6 +14,7 @@ import { UserScalarWhereInput } from './user-scalar-where.input';
  */
 @ApiExtraModels()
 export class UserUpdateManyWithoutFavoriteArticlesInput {
+
     create?: Array<UserCreateWithoutFavoriteArticlesInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFavoriteArticlesInput>;

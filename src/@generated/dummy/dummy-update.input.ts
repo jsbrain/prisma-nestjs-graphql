@@ -6,10 +6,10 @@ import { NullableFloatFieldUpdateOperationsInput } from '../prisma/nullable-floa
 import { NullableBytesFieldUpdateOperationsInput } from '../prisma/nullable-bytes-field-update-operations.input';
 import { NullableDecimalFieldUpdateOperationsInput } from '../prisma/nullable-decimal-field-update-operations.input';
 import { NullableBigIntFieldUpdateOperationsInput } from '../prisma/nullable-big-int-field-update-operations.input';
-import { JsonObject } from 'type-fest';
 import { DummyUpdatefriendsInput } from '../prisma/dummy-updatefriends.input';
 
 export class DummyUpdateInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     created?: DateTimeFieldUpdateOperationsInput;

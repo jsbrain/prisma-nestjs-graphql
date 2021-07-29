@@ -15,10 +15,11 @@ import { ArticleCreateNestedManyWithoutAuthorInput } from '../article/article-cr
  */
 @ApiExtraModels()
 export class UserCreateWithoutCommentsInput {
+
     /** The id of the user */
     id?: string;
 
-    @Type(() => Number)
+    @Type(()=>Number)
     age?: number;
 
     /**
@@ -30,7 +31,7 @@ export class UserCreateWithoutCommentsInput {
     /** User's name */
     @MinLength(3)
     @MinLength(3)
-    @MaxLength(50, { message: `Oh no 😱. It's too long!` })
+    @MaxLength(50, {message: `Oh no 😱. It's too long!`})
     name!: string;
 
     password!: string;

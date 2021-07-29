@@ -10,6 +10,7 @@ import { UserCreateWithoutFollowersInput } from './user-create-without-followers
  */
 @ApiExtraModels()
 export class UserUpsertWithWhereUniqueWithoutFollowersInput {
+
     where!: UserWhereUniqueInput;
 
     update!: UserUpdateWithoutFollowersInput;

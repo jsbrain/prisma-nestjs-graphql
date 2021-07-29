@@ -17,6 +17,7 @@ import { ArticleUpdateManyWithoutAuthorInput } from '../article/article-update-m
  */
 @ApiExtraModels()
 export class UserUpdateWithoutCommentsInput {
+
     /** The id of the user */
     id?: StringFieldUpdateOperationsInput;
 

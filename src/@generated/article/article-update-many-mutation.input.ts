@@ -4,6 +4,7 @@ import { IntFieldUpdateOperationsInput } from '../prisma/int-field-update-operat
 import { NullableBoolFieldUpdateOperationsInput } from '../prisma/nullable-bool-field-update-operations.input';
 
 export class ArticleUpdateManyMutationInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     slug?: StringFieldUpdateOperationsInput;

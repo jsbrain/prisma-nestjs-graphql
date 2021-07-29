@@ -1,7 +1,7 @@
 import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
-import { JsonObject } from 'type-fest';
 
 export class Dummy {
+
     id!: string;
 
     created!: Date;

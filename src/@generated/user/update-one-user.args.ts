@@ -9,6 +9,7 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class UpdateOneUserArgs {
+
     data!: UserUpdateInput;
 
     where!: UserWhereUniqueInput;

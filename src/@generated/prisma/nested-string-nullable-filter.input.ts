@@ -1,4 +1,5 @@
 export class NestedStringNullableFilter {
+
     equals?: string;
 
     in?: Array<string>;

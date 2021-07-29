@@ -10,6 +10,7 @@ import { UserUpdateInput } from './user-update.input';
  */
 @ApiExtraModels()
 export class UpsertOneUserArgs {
+
     where!: UserWhereUniqueInput;
 
     create!: UserCreateInput;

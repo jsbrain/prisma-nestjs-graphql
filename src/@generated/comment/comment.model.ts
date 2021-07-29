@@ -2,6 +2,7 @@ import { User } from '../user/user.model';
 import { Article } from '../article/article.model';
 
 export class Comment {
+
     id!: string;
 
     createdAt!: Date;

@@ -3,6 +3,7 @@ import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { NestedBoolNullableFilter } from './nested-bool-nullable-filter.input';
 
 export class BoolNullableWithAggregatesFilter {
+
     equals?: boolean;
 
     not?: NestedBoolNullableWithAggregatesFilter;

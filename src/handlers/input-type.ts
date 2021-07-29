@@ -2,6 +2,7 @@ import { ok } from 'assert';
 import JSON5 from 'json5';
 import { castArray, trim } from 'lodash';
 import { ClassDeclarationStructure, DecoratorStructure, StructureKind } from 'ts-morph';
+
 import { createFieldSettings } from '../helpers/field-settings';
 import { getGraphqlImport } from '../helpers/get-graphql-import';
 import { getGraphqlInputType } from '../helpers/get-graphql-input-type';

@@ -1,4 +1,5 @@
 export class UserAvgAggregate {
+
     age?: number;
 
     countComments?: number;

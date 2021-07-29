@@ -8,6 +8,7 @@ import { SortOrder } from '../prisma/sort-order.enum';
  */
 @ApiExtraModels()
 export class UserSumOrderByAggregateInput {
+
     age?: SortOrder;
 
     countComments?: SortOrder;

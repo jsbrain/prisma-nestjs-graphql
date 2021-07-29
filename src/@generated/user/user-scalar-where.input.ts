@@ -13,6 +13,7 @@ import { EnumRoleNullableFilter } from '../prisma/enum-role-nullable-filter.inpu
  */
 @ApiExtraModels()
 export class UserScalarWhereInput {
+
     AND?: Array<UserScalarWhereInput>;
 
     OR?: Array<UserScalarWhereInput>;

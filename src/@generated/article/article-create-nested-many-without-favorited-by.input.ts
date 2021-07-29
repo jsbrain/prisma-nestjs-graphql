@@ -3,6 +3,7 @@ import { ArticleCreateOrConnectWithoutFavoritedByInput } from './article-create-
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleCreateNestedManyWithoutFavoritedByInput {
+
     create?: Array<ArticleCreateWithoutFavoritedByInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutFavoritedByInput>;

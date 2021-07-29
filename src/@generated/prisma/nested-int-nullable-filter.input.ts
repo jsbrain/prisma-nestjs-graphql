@@ -1,4 +1,5 @@
 export class NestedIntNullableFilter {
+
     equals?: number;
 
     in?: Array<number>;

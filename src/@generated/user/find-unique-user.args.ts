@@ -8,5 +8,6 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class FindUniqueUserArgs {
+
     where!: UserWhereUniqueInput;
 }

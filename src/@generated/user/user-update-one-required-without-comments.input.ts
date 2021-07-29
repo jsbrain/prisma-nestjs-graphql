@@ -12,6 +12,7 @@ import { UserUpdateWithoutCommentsInput } from './user-update-without-comments.i
  */
 @ApiExtraModels()
 export class UserUpdateOneRequiredWithoutCommentsInput {
+
     create?: UserCreateWithoutCommentsInput;
 
     connectOrCreate?: UserCreateOrConnectWithoutCommentsInput;

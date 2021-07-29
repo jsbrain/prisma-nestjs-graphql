@@ -1,6 +1,5 @@
-import { JsonObject } from 'type-fest';
-
 export class NestedJsonNullableFilter {
+
     equals?: any;
 
     lt?: any;

@@ -16,6 +16,7 @@ import { UserMaxAggregateInput } from './user-max-aggregate.input';
  */
 @ApiExtraModels()
 export class UserGroupByArgs {
+
     where?: UserWhereInput;
 
     orderBy?: Array<UserOrderByWithAggregationInput>;

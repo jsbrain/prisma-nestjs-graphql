@@ -3,6 +3,7 @@ import { NestedFloatNullableFilter } from './nested-float-nullable-filter.input'
 import { NestedBigIntNullableFilter } from './nested-big-int-nullable-filter.input';
 
 export class NestedBigIntNullableWithAggregatesFilter {
+
     equals?: bigint | number;
 
     in?: Array<bigint> | Array<number>;

@@ -4,6 +4,7 @@ import { IntWithAggregatesFilter } from '../prisma/int-with-aggregates-filter.in
 import { BoolNullableWithAggregatesFilter } from '../prisma/bool-nullable-with-aggregates-filter.input';
 
 export class ArticleScalarWhereWithAggregatesInput {
+
     AND?: Array<ArticleScalarWhereWithAggregatesInput>;
 
     OR?: Array<ArticleScalarWhereWithAggregatesInput>;

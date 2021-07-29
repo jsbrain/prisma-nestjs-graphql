@@ -9,6 +9,7 @@ import { UserCreateWithoutArticlesInput } from './user-create-without-articles.i
  */
 @ApiExtraModels()
 export class UserCreateOrConnectWithoutArticlesInput {
+
     where!: UserWhereUniqueInput;
 
     create!: UserCreateWithoutArticlesInput;

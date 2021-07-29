@@ -2,6 +2,7 @@ import filenamify from 'filenamify';
 import { unflatten } from 'flat';
 import { Dictionary, merge, trim } from 'lodash';
 import { Nullable } from 'simplytyped';
+
 import { ReExport } from '../handlers/re-export';
 import { FieldSetting, TypeRecord } from '../types';
 

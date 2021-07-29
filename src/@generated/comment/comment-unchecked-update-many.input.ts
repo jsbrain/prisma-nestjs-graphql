@@ -3,6 +3,7 @@ import { DateTimeFieldUpdateOperationsInput } from '../prisma/date-time-field-up
 import { NullableStringFieldUpdateOperationsInput } from '../prisma/nullable-string-field-update-operations.input';
 
 export class CommentUncheckedUpdateManyInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     createdAt?: DateTimeFieldUpdateOperationsInput;

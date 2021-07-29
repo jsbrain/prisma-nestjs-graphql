@@ -1,5 +1,5 @@
 /** */
 export enum TagScalarFieldEnum {
-    id = 'id',
-    name = 'name',
+    id = "id",
+    name = "name"
 }

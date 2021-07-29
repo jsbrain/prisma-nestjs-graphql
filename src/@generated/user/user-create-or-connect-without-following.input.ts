@@ -9,6 +9,7 @@ import { UserCreateWithoutFollowingInput } from './user-create-without-following
  */
 @ApiExtraModels()
 export class UserCreateOrConnectWithoutFollowingInput {
+
     where!: UserWhereUniqueInput;
 
     create!: UserCreateWithoutFollowingInput;

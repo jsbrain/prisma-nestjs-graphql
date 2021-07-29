@@ -1,8 +1,8 @@
-import { JsonObject } from 'type-fest';
 import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { NestedJsonNullableFilter } from './nested-json-nullable-filter.input';
 
 export class JsonNullableWithAggregatesFilter {
+
     equals?: any;
 
     lt?: any;

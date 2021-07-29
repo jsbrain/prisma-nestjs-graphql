@@ -1,5 +1,4 @@
 import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
-import { JsonObject } from 'type-fest';
 import { DummyCountAggregate } from './dummy-count-aggregate.output';
 import { DummyAvgAggregate } from './dummy-avg-aggregate.output';
 import { DummySumAggregate } from './dummy-sum-aggregate.output';
@@ -7,6 +6,7 @@ import { DummyMinAggregate } from './dummy-min-aggregate.output';
 import { DummyMaxAggregate } from './dummy-max-aggregate.output';
 
 export class DummyGroupBy {
+
     id!: string;
 
     created!: Date | string;

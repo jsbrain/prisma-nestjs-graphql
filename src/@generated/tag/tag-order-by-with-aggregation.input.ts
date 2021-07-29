@@ -4,6 +4,7 @@ import { TagMaxOrderByAggregateInput } from './tag-max-order-by-aggregate.input'
 import { TagMinOrderByAggregateInput } from './tag-min-order-by-aggregate.input';
 
 export class TagOrderByWithAggregationInput {
+
     id?: SortOrder;
 
     name?: SortOrder;

@@ -3,6 +3,7 @@ import { NestedIntFilter } from './nested-int-filter.input';
 import { NestedDateTimeFilter } from './nested-date-time-filter.input';
 
 export class DateTimeWithAggregatesFilter {
+
     equals?: Date | string;
 
     in?: Array<Date> | Array<string>;

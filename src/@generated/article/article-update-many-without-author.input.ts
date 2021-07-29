@@ -8,6 +8,7 @@ import { ArticleUpdateManyWithWhereWithoutAuthorInput } from './article-update-m
 import { ArticleScalarWhereInput } from './article-scalar-where.input';
 
 export class ArticleUpdateManyWithoutAuthorInput {
+
     create?: Array<ArticleCreateWithoutAuthorInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutAuthorInput>;

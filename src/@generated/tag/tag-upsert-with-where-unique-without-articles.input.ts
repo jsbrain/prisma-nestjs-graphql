@@ -3,6 +3,7 @@ import { TagUpdateWithoutArticlesInput } from './tag-update-without-articles.inp
 import { TagCreateWithoutArticlesInput } from './tag-create-without-articles.input';
 
 export class TagUpsertWithWhereUniqueWithoutArticlesInput {
+
     where!: TagWhereUniqueInput;
 
     update!: TagUpdateWithoutArticlesInput;

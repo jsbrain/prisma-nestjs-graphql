@@ -9,6 +9,7 @@ import { UserCreateWithoutFavoriteArticlesInput } from './user-create-without-fa
  */
 @ApiExtraModels()
 export class UserCreateOrConnectWithoutFavoriteArticlesInput {
+
     where!: UserWhereUniqueInput;
 
     create!: UserCreateWithoutFavoriteArticlesInput;

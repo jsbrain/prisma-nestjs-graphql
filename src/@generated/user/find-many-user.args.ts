@@ -11,6 +11,7 @@ import { UserScalarFieldEnum } from './user-scalar-field.enum';
  */
 @ApiExtraModels()
 export class FindManyUserArgs {
+
     where?: UserWhereInput;
 
     orderBy?: Array<UserOrderByWithRelationInput>;

@@ -15,6 +15,7 @@ import { CommentUncheckedUpdateManyWithoutAuthorInput } from '../comment/comment
  */
 @ApiExtraModels()
 export class UserUncheckedUpdateInput {
+
     /** The id of the user */
     id?: StringFieldUpdateOperationsInput;
 

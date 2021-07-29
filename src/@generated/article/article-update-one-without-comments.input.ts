@@ -5,6 +5,7 @@ import { ArticleWhereUniqueInput } from './article-where-unique.input';
 import { ArticleUpdateWithoutCommentsInput } from './article-update-without-comments.input';
 
 export class ArticleUpdateOneWithoutCommentsInput {
+
     create?: ArticleCreateWithoutCommentsInput;
 
     connectOrCreate?: ArticleCreateOrConnectWithoutCommentsInput;

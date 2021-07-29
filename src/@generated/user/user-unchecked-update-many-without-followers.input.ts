@@ -13,6 +13,7 @@ import { NullableEnumRoleFieldUpdateOperationsInput } from '../prisma/nullable-e
  */
 @ApiExtraModels()
 export class UserUncheckedUpdateManyWithoutFollowersInput {
+
     /** The id of the user */
     id?: StringFieldUpdateOperationsInput;
 

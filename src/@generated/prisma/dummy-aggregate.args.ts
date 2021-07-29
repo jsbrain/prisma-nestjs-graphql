@@ -8,6 +8,7 @@ import { DummyMinAggregateInput } from '../dummy/dummy-min-aggregate.input';
 import { DummyMaxAggregateInput } from '../dummy/dummy-max-aggregate.input';
 
 export class DummyAggregateArgs {
+
     where?: DummyWhereInput;
 
     orderBy?: Array<DummyOrderByWithRelationInput>;

@@ -8,5 +8,6 @@ import { UserCreateInput } from './user-create.input';
  */
 @ApiExtraModels()
 export class CreateOneUserArgs {
+
     data!: UserCreateInput;
 }

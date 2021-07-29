@@ -18,6 +18,7 @@ import { CommentUpdateManyWithoutAuthorInput } from '../comment/comment-update-m
  */
 @ApiExtraModels()
 export class UserUpdateInput {
+
     /** The id of the user */
     id?: StringFieldUpdateOperationsInput;
 

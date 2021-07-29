@@ -1,4 +1,5 @@
 import { SourceFile } from 'ts-morph';
+
 import { FieldLocation, TypeRecord } from '../types';
 import { fileTypeByLocation } from './file-type-by-location';
 import { relativePath } from './relative-path';
@@ -49,8 +50,9 @@ export function getGraphqlImport(args: {
                     specifier: 'prisma-graphql-type-decimal',
                 };
             // ! -> Disable graphql type import
-            case 'Json':
-                return { name: 'JsonObject', specifier: 'type-fest' };
+            // case 'Json':
+            // return { name: 'JsonObject', specifier: '@prisma/client' };
+            // return { name: 'JsonObject', specifier: 'type-fest' };
             // case 'Json':
             //     return { name: 'GraphQLJSON', specifier: 'graphql-type-json' };
         }

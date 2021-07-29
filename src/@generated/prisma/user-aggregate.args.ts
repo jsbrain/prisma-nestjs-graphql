@@ -8,6 +8,7 @@ import { UserMinAggregateInput } from '../user/user-min-aggregate.input';
 import { UserMaxAggregateInput } from '../user/user-max-aggregate.input';
 
 export class UserAggregateArgs {
+
     where?: UserWhereInput;
 
     orderBy?: Array<UserOrderByWithRelationInput>;

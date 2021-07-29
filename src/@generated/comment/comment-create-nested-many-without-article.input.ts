@@ -4,6 +4,7 @@ import { CommentCreateManyArticleInputEnvelope } from './comment-create-many-art
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentCreateNestedManyWithoutArticleInput {
+
     create?: Array<CommentCreateWithoutArticleInput>;
 
     connectOrCreate?: Array<CommentCreateOrConnectWithoutArticleInput>;
