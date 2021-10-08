@@ -1,10 +1,9 @@
-import { StringFilter } from '../prisma/string-filter.input';
+import { BoolNullableFilter } from '../prisma/bool-nullable-filter.input';
 import { DateTimeFilter } from '../prisma/date-time-filter.input';
 import { IntFilter } from '../prisma/int-filter.input';
-import { BoolNullableFilter } from '../prisma/bool-nullable-filter.input';
+import { StringFilter } from '../prisma/string-filter.input';
 
 export class ArticleScalarWhereInput {
-
     AND?: Array<ArticleScalarWhereInput>;
 
     OR?: Array<ArticleScalarWhereInput>;

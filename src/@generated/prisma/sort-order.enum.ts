@@ -1,5 +1,5 @@
 /** */
 export enum SortOrder {
-    asc = "asc",
-    desc = "desc"
+    asc = 'asc',
+    desc = 'desc',
 }

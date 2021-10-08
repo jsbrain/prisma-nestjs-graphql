@@ -1,5 +1,4 @@
 export class CommentMaxAggregate {
-
     id?: string;
 
     createdAt?: Date | string;

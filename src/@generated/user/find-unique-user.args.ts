@@ -1,4 +1,5 @@
 import { ApiExtraModels } from '@nestjs/swagger';
+
 import { UserWhereUniqueInput } from './user-where-unique.input';
 
 /**
@@ -8,6 +9,5 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class FindUniqueUserArgs {
-
     where!: UserWhereUniqueInput;
 }

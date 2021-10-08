@@ -1,6 +1,7 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { UserWhereUniqueInput } from './user-where-unique.input';
+
 import { UserUpdateWithoutFavoriteArticlesInput } from './user-update-without-favorite-articles.input';
+import { UserWhereUniqueInput } from './user-where-unique.input';
 
 /**
  * User really
@@ -9,7 +10,6 @@ import { UserUpdateWithoutFavoriteArticlesInput } from './user-update-without-fa
  */
 @ApiExtraModels()
 export class UserUpdateWithWhereUniqueWithoutFavoriteArticlesInput {
-
     where!: UserWhereUniqueInput;
 
     data!: UserUpdateWithoutFavoriteArticlesInput;

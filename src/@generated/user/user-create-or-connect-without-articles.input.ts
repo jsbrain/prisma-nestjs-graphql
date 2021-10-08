@@ -1,6 +1,7 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { UserWhereUniqueInput } from './user-where-unique.input';
+
 import { UserCreateWithoutArticlesInput } from './user-create-without-articles.input';
+import { UserWhereUniqueInput } from './user-where-unique.input';
 
 /**
  * User really
@@ -9,7 +10,6 @@ import { UserCreateWithoutArticlesInput } from './user-create-without-articles.i
  */
 @ApiExtraModels()
 export class UserCreateOrConnectWithoutArticlesInput {
-
     where!: UserWhereUniqueInput;
 
     create!: UserCreateWithoutArticlesInput;

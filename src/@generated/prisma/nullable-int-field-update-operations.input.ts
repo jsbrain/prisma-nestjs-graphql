@@ -1,5 +1,4 @@
 export class NullableIntFieldUpdateOperationsInput {
-
     set?: number;
 
     increment?: number;

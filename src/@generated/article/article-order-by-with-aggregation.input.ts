@@ -1,12 +1,11 @@
 import { SortOrder } from '../prisma/sort-order.enum';
-import { ArticleCountOrderByAggregateInput } from './article-count-order-by-aggregate.input';
 import { ArticleAvgOrderByAggregateInput } from './article-avg-order-by-aggregate.input';
+import { ArticleCountOrderByAggregateInput } from './article-count-order-by-aggregate.input';
 import { ArticleMaxOrderByAggregateInput } from './article-max-order-by-aggregate.input';
 import { ArticleMinOrderByAggregateInput } from './article-min-order-by-aggregate.input';
 import { ArticleSumOrderByAggregateInput } from './article-sum-order-by-aggregate.input';
 
 export class ArticleOrderByWithAggregationInput {
-
     id?: SortOrder;
 
     slug?: SortOrder;

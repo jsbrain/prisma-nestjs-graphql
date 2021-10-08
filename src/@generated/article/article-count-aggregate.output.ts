@@ -1,5 +1,4 @@
 export class ArticleCountAggregate {
-
     id!: number;
 
     slug!: number;

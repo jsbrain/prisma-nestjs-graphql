@@ -1,4 +1,5 @@
 import { ApiExtraModels } from '@nestjs/swagger';
+
 import { SortOrder } from '../prisma/sort-order.enum';
 
 /**
@@ -8,6 +9,5 @@ import { SortOrder } from '../prisma/sort-order.enum';
  */
 @ApiExtraModels()
 export class UserOrderByRelationAggregateInput {
-
     _count?: SortOrder;
 }

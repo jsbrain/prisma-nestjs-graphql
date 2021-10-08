@@ -1,5 +1,4 @@
 export class DummyMaxAggregateInput {
-
     id?: true;
 
     created?: true;

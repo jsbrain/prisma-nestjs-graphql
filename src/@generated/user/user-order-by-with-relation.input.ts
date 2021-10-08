@@ -1,8 +1,9 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { SortOrder } from '../prisma/sort-order.enum';
-import { UserOrderByRelationAggregateInput } from './user-order-by-relation-aggregate.input';
+
 import { ArticleOrderByRelationAggregateInput } from '../article/article-order-by-relation-aggregate.input';
 import { CommentOrderByRelationAggregateInput } from '../comment/comment-order-by-relation-aggregate.input';
+import { SortOrder } from '../prisma/sort-order.enum';
+import { UserOrderByRelationAggregateInput } from './user-order-by-relation-aggregate.input';
 
 /**
  * User really
@@ -11,7 +12,6 @@ import { CommentOrderByRelationAggregateInput } from '../comment/comment-order-b
  */
 @ApiExtraModels()
 export class UserOrderByWithRelationInput {
-
     /** The id of the user */
     id?: SortOrder;
 

@@ -1,10 +1,10 @@
 import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
+
+import { NestedDecimalNullableFilter } from './nested-decimal-nullable-filter.input';
 import { NestedDecimalNullableWithAggregatesFilter } from './nested-decimal-nullable-with-aggregates-filter.input';
 import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
-import { NestedDecimalNullableFilter } from './nested-decimal-nullable-filter.input';
 
 export class DecimalNullableWithAggregatesFilter {
-
     equals?: any;
 
     in?: Array<any>;

@@ -1,5 +1,5 @@
-import { User } from '../user/user.model';
 import { Article } from '../article/article.model';
+import { User } from '../user/user.model';
 
 export class Comment {
     id!: string;

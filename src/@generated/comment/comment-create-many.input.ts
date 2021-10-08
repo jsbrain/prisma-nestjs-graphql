@@ -1,5 +1,4 @@
 export class CommentCreateManyInput {
-
     id?: string;
 
     createdAt?: Date | string;

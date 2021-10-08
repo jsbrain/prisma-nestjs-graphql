@@ -1,11 +1,12 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { UserCreateWithoutFollowingInput } from './user-create-without-following.input';
+
 import { UserCreateOrConnectWithoutFollowingInput } from './user-create-or-connect-without-following.input';
+import { UserCreateWithoutFollowingInput } from './user-create-without-following.input';
+import { UserScalarWhereInput } from './user-scalar-where.input';
+import { UserUpdateManyWithWhereWithoutFollowingInput } from './user-update-many-with-where-without-following.input';
+import { UserUpdateWithWhereUniqueWithoutFollowingInput } from './user-update-with-where-unique-without-following.input';
 import { UserUpsertWithWhereUniqueWithoutFollowingInput } from './user-upsert-with-where-unique-without-following.input';
 import { UserWhereUniqueInput } from './user-where-unique.input';
-import { UserUpdateWithWhereUniqueWithoutFollowingInput } from './user-update-with-where-unique-without-following.input';
-import { UserUpdateManyWithWhereWithoutFollowingInput } from './user-update-many-with-where-without-following.input';
-import { UserScalarWhereInput } from './user-scalar-where.input';
 
 /**
  * User really
@@ -14,7 +15,6 @@ import { UserScalarWhereInput } from './user-scalar-where.input';
  */
 @ApiExtraModels()
 export class UserUpdateManyWithoutFollowingInput {
-
     create?: Array<UserCreateWithoutFollowingInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFollowingInput>;

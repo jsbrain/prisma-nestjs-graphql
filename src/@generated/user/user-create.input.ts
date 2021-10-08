@@ -1,13 +1,13 @@
 import { ApiExtraModels } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { MinLength } from 'class-validator';
-import { MaxLength } from 'class-validator';
+import { MaxLength, MinLength } from 'class-validator';
+
+import { ArticleCreateNestedManyWithoutAuthorInput } from '../article/article-create-nested-many-without-author.input';
+import { ArticleCreateNestedManyWithoutFavoritedByInput } from '../article/article-create-nested-many-without-favorited-by.input';
+import { CommentCreateNestedManyWithoutAuthorInput } from '../comment/comment-create-nested-many-without-author.input';
 import { Role } from '../prisma/role.enum';
 import { UserCreateNestedManyWithoutFollowersInput } from './user-create-nested-many-without-followers.input';
 import { UserCreateNestedManyWithoutFollowingInput } from './user-create-nested-many-without-following.input';
-import { ArticleCreateNestedManyWithoutFavoritedByInput } from '../article/article-create-nested-many-without-favorited-by.input';
-import { ArticleCreateNestedManyWithoutAuthorInput } from '../article/article-create-nested-many-without-author.input';
-import { CommentCreateNestedManyWithoutAuthorInput } from '../comment/comment-create-nested-many-without-author.input';
 
 /**
  * User really
@@ -16,11 +16,10 @@ import { CommentCreateNestedManyWithoutAuthorInput } from '../comment/comment-cr
  */
 @ApiExtraModels()
 export class UserCreateInput {
-
     /** The id of the user */
     id?: string;
 
-    @Type(()=>Number)
+    @Type(() => Number)
     age?: number;
 
     /**
@@ -32,7 +31,7 @@ export class UserCreateInput {
     /** User's name */
     @MinLength(3)
     @MinLength(3)
-    @MaxLength(50, {message: `Oh no 😱. It's too long!`})
+    @MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

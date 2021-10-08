@@ -1,8 +1,7 @@
-import { NestedIntFilter } from './nested-int-filter.input';
 import { NestedFloatFilter } from './nested-float-filter.input';
+import { NestedIntFilter } from './nested-int-filter.input';
 
 export class NestedIntWithAggregatesFilter {
-
     equals?: number;
 
     in?: Array<number>;

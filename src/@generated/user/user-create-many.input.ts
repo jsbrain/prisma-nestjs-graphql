@@ -1,7 +1,7 @@
 import { ApiExtraModels } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { MinLength } from 'class-validator';
-import { MaxLength } from 'class-validator';
+import { MaxLength, MinLength } from 'class-validator';
+
 import { Role } from '../prisma/role.enum';
 
 /**
@@ -11,11 +11,10 @@ import { Role } from '../prisma/role.enum';
  */
 @ApiExtraModels()
 export class UserCreateManyInput {
-
     /** The id of the user */
     id?: string;
 
-    @Type(()=>Number)
+    @Type(() => Number)
     age?: number;
 
     /**
@@ -27,7 +26,7 @@ export class UserCreateManyInput {
     /** User's name */
     @MinLength(3)
     @MinLength(3)
-    @MaxLength(50, {message: `Oh no 😱. It's too long!`})
+    @MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

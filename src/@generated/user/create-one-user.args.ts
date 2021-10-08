@@ -1,4 +1,5 @@
 import { ApiExtraModels } from '@nestjs/swagger';
+
 import { UserCreateInput } from './user-create.input';
 
 /**
@@ -8,6 +9,5 @@ import { UserCreateInput } from './user-create.input';
  */
 @ApiExtraModels()
 export class CreateOneUserArgs {
-
     data!: UserCreateInput;
 }

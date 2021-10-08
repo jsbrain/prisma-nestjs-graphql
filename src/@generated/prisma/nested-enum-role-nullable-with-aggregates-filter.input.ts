@@ -1,9 +1,8 @@
-import { Role } from './role.enum';
-import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { NestedEnumRoleNullableFilter } from './nested-enum-role-nullable-filter.input';
+import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
+import { Role } from './role.enum';
 
 export class NestedEnumRoleNullableWithAggregatesFilter {
-
     equals?: Role;
 
     in?: Array<Role>;

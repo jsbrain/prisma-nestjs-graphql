@@ -7,7 +7,6 @@ import { ApiExtraModels } from '@nestjs/swagger';
  */
 @ApiExtraModels()
 export class UserCountAggregateInput {
-
     /** The id of the user */
     id?: true;
 

@@ -1,5 +1,4 @@
 export class NestedBigIntNullableFilter {
-
     equals?: bigint | number;
 
     in?: Array<bigint> | Array<number>;

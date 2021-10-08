@@ -1,5 +1,4 @@
 export class ArticleUncheckedCreateWithoutCommentsInput {
-
     id?: string;
 
     slug!: string;

@@ -1,10 +1,9 @@
-import { CommentCreateWithoutArticleInput } from './comment-create-without-article.input';
-import { CommentCreateOrConnectWithoutArticleInput } from './comment-create-or-connect-without-article.input';
 import { CommentCreateManyArticleInputEnvelope } from './comment-create-many-article-input-envelope.input';
+import { CommentCreateOrConnectWithoutArticleInput } from './comment-create-or-connect-without-article.input';
+import { CommentCreateWithoutArticleInput } from './comment-create-without-article.input';
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentUncheckedCreateNestedManyWithoutArticleInput {
-
     create?: Array<CommentCreateWithoutArticleInput>;
 
     connectOrCreate?: Array<CommentCreateOrConnectWithoutArticleInput>;

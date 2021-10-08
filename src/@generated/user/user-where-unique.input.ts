@@ -1,6 +1,5 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { MinLength } from 'class-validator';
-import { MaxLength } from 'class-validator';
+import { MaxLength, MinLength } from 'class-validator';
 
 /**
  * User really
@@ -9,7 +8,6 @@ import { MaxLength } from 'class-validator';
  */
 @ApiExtraModels()
 export class UserWhereUniqueInput {
-
     /** The id of the user */
     id?: string;
 
@@ -22,6 +20,6 @@ export class UserWhereUniqueInput {
     /** User's name */
     @MinLength(3)
     @MinLength(3)
-    @MaxLength(50, {message: `Oh no 😱. It's too long!`})
+    @MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name?: string;
 }

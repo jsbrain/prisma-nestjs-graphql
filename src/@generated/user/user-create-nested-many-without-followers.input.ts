@@ -1,6 +1,7 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { UserCreateWithoutFollowersInput } from './user-create-without-followers.input';
+
 import { UserCreateOrConnectWithoutFollowersInput } from './user-create-or-connect-without-followers.input';
+import { UserCreateWithoutFollowersInput } from './user-create-without-followers.input';
 import { UserWhereUniqueInput } from './user-where-unique.input';
 
 /**
@@ -10,7 +11,6 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class UserCreateNestedManyWithoutFollowersInput {
-
     create?: Array<UserCreateWithoutFollowersInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFollowersInput>;

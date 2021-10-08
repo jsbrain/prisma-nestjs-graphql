@@ -1,5 +1,4 @@
 export class ArticleCreateManyInput {
-
     id?: string;
 
     slug!: string;

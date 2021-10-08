@@ -1,5 +1,4 @@
 export class NestedJsonNullableFilter {
-
     equals?: any;
 
     lt?: any;

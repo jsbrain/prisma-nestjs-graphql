@@ -1,5 +1,4 @@
 export class NestedIntFilter {
-
     equals?: number;
 
     in?: Array<number>;

@@ -1,10 +1,9 @@
-import { QueryMode } from './query-mode.enum';
-import { NestedStringNullableWithAggregatesFilter } from './nested-string-nullable-with-aggregates-filter.input';
 import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { NestedStringNullableFilter } from './nested-string-nullable-filter.input';
+import { NestedStringNullableWithAggregatesFilter } from './nested-string-nullable-with-aggregates-filter.input';
+import { QueryMode } from './query-mode.enum';
 
 export class StringNullableWithAggregatesFilter {
-
     equals?: string;
 
     in?: Array<string>;

@@ -1,6 +1,7 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { UserUpdateWithoutArticlesInput } from './user-update-without-articles.input';
+
 import { UserCreateWithoutArticlesInput } from './user-create-without-articles.input';
+import { UserUpdateWithoutArticlesInput } from './user-update-without-articles.input';
 
 /**
  * User really
@@ -9,7 +10,6 @@ import { UserCreateWithoutArticlesInput } from './user-create-without-articles.i
  */
 @ApiExtraModels()
 export class UserUpsertWithoutArticlesInput {
-
     update!: UserUpdateWithoutArticlesInput;
 
     create!: UserCreateWithoutArticlesInput;

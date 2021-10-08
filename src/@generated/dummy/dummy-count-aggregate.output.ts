@@ -1,5 +1,4 @@
 export class DummyCountAggregate {
-
     id!: number;
 
     created!: number;

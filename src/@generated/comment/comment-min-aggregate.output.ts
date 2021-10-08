@@ -1,5 +1,4 @@
 export class CommentMinAggregate {
-
     id?: string;
 
     createdAt?: Date | string;

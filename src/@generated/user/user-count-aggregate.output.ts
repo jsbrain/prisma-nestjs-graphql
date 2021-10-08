@@ -1,11 +1,10 @@
 import { Type } from 'class-transformer';
 
 export class UserCountAggregate {
-
     /** The id of the user */
     id!: number;
 
-    @Type(()=>Number)
+    @Type(() => Number)
     age!: number;
 
     /**

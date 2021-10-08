@@ -1,9 +1,8 @@
-import { NestedIntNullableWithAggregatesFilter } from './nested-int-nullable-with-aggregates-filter.input';
-import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { NestedFloatNullableFilter } from './nested-float-nullable-filter.input';
+import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
+import { NestedIntNullableWithAggregatesFilter } from './nested-int-nullable-with-aggregates-filter.input';
 
 export class IntNullableWithAggregatesFilter {
-
     equals?: number;
 
     in?: Array<number>;

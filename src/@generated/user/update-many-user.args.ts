@@ -1,4 +1,5 @@
 import { ApiExtraModels } from '@nestjs/swagger';
+
 import { UserUpdateManyMutationInput } from './user-update-many-mutation.input';
 import { UserWhereInput } from './user-where.input';
 
@@ -9,7 +10,6 @@ import { UserWhereInput } from './user-where.input';
  */
 @ApiExtraModels()
 export class UpdateManyUserArgs {
-
     data!: UserUpdateManyMutationInput;
 
     where?: UserWhereInput;

@@ -1,10 +1,10 @@
 import { ApiExtraModels } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { MinLength } from 'class-validator';
-import { MaxLength } from 'class-validator';
-import { Role } from '../prisma/role.enum';
+import { MaxLength, MinLength } from 'class-validator';
+
 import { ArticleUncheckedCreateNestedManyWithoutAuthorInput } from '../article/article-unchecked-create-nested-many-without-author.input';
 import { CommentUncheckedCreateNestedManyWithoutAuthorInput } from '../comment/comment-unchecked-create-nested-many-without-author.input';
+import { Role } from '../prisma/role.enum';
 
 /**
  * User really
@@ -13,11 +13,10 @@ import { CommentUncheckedCreateNestedManyWithoutAuthorInput } from '../comment/c
  */
 @ApiExtraModels()
 export class UserUncheckedCreateInput {
-
     /** The id of the user */
     id?: string;
 
-    @Type(()=>Number)
+    @Type(() => Number)
     age?: number;
 
     /**
@@ -29,7 +28,7 @@ export class UserUncheckedCreateInput {
     /** User's name */
     @MinLength(3)
     @MinLength(3)
-    @MaxLength(50, {message: `Oh no 😱. It's too long!`})
+    @MaxLength(50, { message: `Oh no 😱. It's too long!` })
     name!: string;
 
     password!: string;

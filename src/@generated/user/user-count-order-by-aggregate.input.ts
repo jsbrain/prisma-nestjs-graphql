@@ -1,4 +1,5 @@
 import { ApiExtraModels } from '@nestjs/swagger';
+
 import { SortOrder } from '../prisma/sort-order.enum';
 
 /**
@@ -8,7 +9,6 @@ import { SortOrder } from '../prisma/sort-order.enum';
  */
 @ApiExtraModels()
 export class UserCountOrderByAggregateInput {
-
     /** The id of the user */
     id?: SortOrder;
 

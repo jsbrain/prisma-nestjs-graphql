@@ -1,6 +1,6 @@
 /** */
 export enum JsonNullValueFilter {
-    DbNull = "DbNull",
-    JsonNull = "JsonNull",
-    AnyNull = "AnyNull"
+    DatabaseNull = 'DbNull',
+    JsonNull = 'JsonNull',
+    AnyNull = 'AnyNull',
 }

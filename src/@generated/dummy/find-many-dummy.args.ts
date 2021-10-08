@@ -1,10 +1,9 @@
-import { DummyWhereInput } from './dummy-where.input';
 import { DummyOrderByWithRelationInput } from './dummy-order-by-with-relation.input';
-import { DummyWhereUniqueInput } from './dummy-where-unique.input';
 import { DummyScalarFieldEnum } from './dummy-scalar-field.enum';
+import { DummyWhereInput } from './dummy-where.input';
+import { DummyWhereUniqueInput } from './dummy-where-unique.input';
 
 export class FindManyDummyArgs {
-
     where?: DummyWhereInput;
 
     orderBy?: Array<DummyOrderByWithRelationInput>;

@@ -7,7 +7,6 @@ import { ApiExtraModels } from '@nestjs/swagger';
  */
 @ApiExtraModels()
 export class UserSumAggregateInput {
-
     age?: true;
 
     countComments?: true;

@@ -1,4 +1,5 @@
 import { ApiExtraModels } from '@nestjs/swagger';
+
 import { UserWhereInput } from './user-where.input';
 
 /**
@@ -8,6 +9,5 @@ import { UserWhereInput } from './user-where.input';
  */
 @ApiExtraModels()
 export class DeleteManyUserArgs {
-
     where?: UserWhereInput;
 }

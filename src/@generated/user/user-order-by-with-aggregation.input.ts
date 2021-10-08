@@ -1,7 +1,8 @@
 import { ApiExtraModels } from '@nestjs/swagger';
+
 import { SortOrder } from '../prisma/sort-order.enum';
-import { UserCountOrderByAggregateInput } from './user-count-order-by-aggregate.input';
 import { UserAvgOrderByAggregateInput } from './user-avg-order-by-aggregate.input';
+import { UserCountOrderByAggregateInput } from './user-count-order-by-aggregate.input';
 import { UserMaxOrderByAggregateInput } from './user-max-order-by-aggregate.input';
 import { UserMinOrderByAggregateInput } from './user-min-order-by-aggregate.input';
 import { UserSumOrderByAggregateInput } from './user-sum-order-by-aggregate.input';
@@ -13,7 +14,6 @@ import { UserSumOrderByAggregateInput } from './user-sum-order-by-aggregate.inpu
  */
 @ApiExtraModels()
 export class UserOrderByWithAggregationInput {
-
     /** The id of the user */
     id?: SortOrder;
 

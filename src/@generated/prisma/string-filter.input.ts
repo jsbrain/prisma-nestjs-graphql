@@ -1,8 +1,7 @@
-import { QueryMode } from './query-mode.enum';
 import { NestedStringFilter } from './nested-string-filter.input';
+import { QueryMode } from './query-mode.enum';
 
 export class StringFilter {
-
     equals?: string;
 
     in?: Array<string>;

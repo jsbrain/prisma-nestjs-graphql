@@ -1,7 +1,6 @@
 import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 
 export class IntNullableFilter {
-
     equals?: number;
 
     in?: Array<number>;

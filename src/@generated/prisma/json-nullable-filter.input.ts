@@ -1,5 +1,4 @@
 export class JsonNullableFilter {
-
     equals?: any;
 
     lt?: any;

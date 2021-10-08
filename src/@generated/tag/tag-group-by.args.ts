@@ -1,13 +1,12 @@
-import { TagWhereInput } from './tag-where.input';
+import { TagCountAggregateInput } from './tag-count-aggregate.input';
+import { TagMaxAggregateInput } from './tag-max-aggregate.input';
+import { TagMinAggregateInput } from './tag-min-aggregate.input';
 import { TagOrderByWithAggregationInput } from './tag-order-by-with-aggregation.input';
 import { TagScalarFieldEnum } from './tag-scalar-field.enum';
 import { TagScalarWhereWithAggregatesInput } from './tag-scalar-where-with-aggregates.input';
-import { TagCountAggregateInput } from './tag-count-aggregate.input';
-import { TagMinAggregateInput } from './tag-min-aggregate.input';
-import { TagMaxAggregateInput } from './tag-max-aggregate.input';
+import { TagWhereInput } from './tag-where.input';
 
 export class TagGroupByArgs {
-
     where?: TagWhereInput;
 
     orderBy?: Array<TagOrderByWithAggregationInput>;

@@ -1,8 +1,9 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { UserWhereInput } from './user-where.input';
+
 import { UserOrderByWithRelationInput } from './user-order-by-with-relation.input';
-import { UserWhereUniqueInput } from './user-where-unique.input';
 import { UserScalarFieldEnum } from './user-scalar-field.enum';
+import { UserWhereInput } from './user-where.input';
+import { UserWhereUniqueInput } from './user-where-unique.input';
 
 /**
  * User really
@@ -11,7 +12,6 @@ import { UserScalarFieldEnum } from './user-scalar-field.enum';
  */
 @ApiExtraModels()
 export class FindFirstUserArgs {
-
     where?: UserWhereInput;
 
     orderBy?: Array<UserOrderByWithRelationInput>;

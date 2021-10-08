@@ -1,10 +1,11 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-operations.input';
+
 import { IntFieldUpdateOperationsInput } from '../prisma/int-field-update-operations.input';
-import { NullableStringFieldUpdateOperationsInput } from '../prisma/nullable-string-field-update-operations.input';
-import { NullableIntFieldUpdateOperationsInput } from '../prisma/nullable-int-field-update-operations.input';
-import { NullableFloatFieldUpdateOperationsInput } from '../prisma/nullable-float-field-update-operations.input';
 import { NullableEnumRoleFieldUpdateOperationsInput } from '../prisma/nullable-enum-role-field-update-operations.input';
+import { NullableFloatFieldUpdateOperationsInput } from '../prisma/nullable-float-field-update-operations.input';
+import { NullableIntFieldUpdateOperationsInput } from '../prisma/nullable-int-field-update-operations.input';
+import { NullableStringFieldUpdateOperationsInput } from '../prisma/nullable-string-field-update-operations.input';
+import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-operations.input';
 
 /**
  * User really
@@ -13,7 +14,6 @@ import { NullableEnumRoleFieldUpdateOperationsInput } from '../prisma/nullable-e
  */
 @ApiExtraModels()
 export class UserUncheckedUpdateManyWithoutFollowingInput {
-
     /** The id of the user */
     id?: StringFieldUpdateOperationsInput;
 

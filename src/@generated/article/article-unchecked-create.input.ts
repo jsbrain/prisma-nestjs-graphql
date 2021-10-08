@@ -1,7 +1,6 @@
 import { CommentUncheckedCreateNestedManyWithoutArticleInput } from '../comment/comment-unchecked-create-nested-many-without-article.input';
 
 export class ArticleUncheckedCreateInput {
-
     id?: string;
 
     slug!: string;

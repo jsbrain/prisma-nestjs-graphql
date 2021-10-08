@@ -1,7 +1,6 @@
 import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
 
 export class DummyMinAggregate {
-
     id?: string;
 
     created?: Date | string;

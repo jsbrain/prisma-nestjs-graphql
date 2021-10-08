@@ -1,6 +1,7 @@
 import { ApiExtraModels } from '@nestjs/swagger';
-import { UserCreateWithoutFavoriteArticlesInput } from './user-create-without-favorite-articles.input';
+
 import { UserCreateOrConnectWithoutFavoriteArticlesInput } from './user-create-or-connect-without-favorite-articles.input';
+import { UserCreateWithoutFavoriteArticlesInput } from './user-create-without-favorite-articles.input';
 import { UserWhereUniqueInput } from './user-where-unique.input';
 
 /**
@@ -10,7 +11,6 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class UserCreateNestedManyWithoutFavoriteArticlesInput {
-
     create?: Array<UserCreateWithoutFavoriteArticlesInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFavoriteArticlesInput>;
