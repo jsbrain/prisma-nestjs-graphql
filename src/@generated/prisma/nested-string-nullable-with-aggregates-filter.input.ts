@@ -27,13 +27,7 @@ export class NestedStringNullableWithAggregatesFilter {
 
     _count?: NestedIntNullableFilter;
 
-    count?: NestedIntNullableFilter;
-
     _min?: NestedStringNullableFilter;
 
-    min?: NestedStringNullableFilter;
-
     _max?: NestedStringNullableFilter;
-
-    max?: NestedStringNullableFilter;
 }

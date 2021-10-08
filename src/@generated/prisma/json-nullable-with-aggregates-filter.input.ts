@@ -31,13 +31,7 @@ export class JsonNullableWithAggregatesFilter {
 
     _count?: NestedIntNullableFilter;
 
-    count?: NestedIntNullableFilter;
-
     _min?: NestedJsonNullableFilter;
 
-    min?: NestedJsonNullableFilter;
-
     _max?: NestedJsonNullableFilter;
-
-    max?: NestedJsonNullableFilter;
 }

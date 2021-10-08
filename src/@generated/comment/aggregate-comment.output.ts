@@ -6,13 +6,7 @@ export class AggregateComment {
 
     _count?: CommentCountAggregate;
 
-    count?: CommentCountAggregate;
-
     _min?: CommentMinAggregate;
 
-    min?: CommentMinAggregate;
-
     _max?: CommentMaxAggregate;
-
-    max?: CommentMaxAggregate;
 }

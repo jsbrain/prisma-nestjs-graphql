@@ -8,21 +8,11 @@ export class AggregateArticle {
 
     _count?: ArticleCountAggregate;
 
-    count?: ArticleCountAggregate;
-
     _avg?: ArticleAvgAggregate;
-
-    avg?: ArticleAvgAggregate;
 
     _sum?: ArticleSumAggregate;
 
-    sum?: ArticleSumAggregate;
-
     _min?: ArticleMinAggregate;
 
-    min?: ArticleMinAggregate;
-
     _max?: ArticleMaxAggregate;
-
-    max?: ArticleMaxAggregate;
 }

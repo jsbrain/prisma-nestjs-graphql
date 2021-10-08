@@ -6,13 +6,7 @@ export class AggregateTag {
 
     _count?: TagCountAggregate;
 
-    count?: TagCountAggregate;
-
     _min?: TagMinAggregate;
 
-    min?: TagMinAggregate;
-
     _max?: TagMaxAggregate;
-
-    max?: TagMaxAggregate;
 }

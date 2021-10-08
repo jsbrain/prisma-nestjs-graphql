@@ -21,13 +21,7 @@ export class NestedDateTimeWithAggregatesFilter {
 
     _count?: NestedIntFilter;
 
-    count?: NestedIntFilter;
-
     _min?: NestedDateTimeFilter;
 
-    min?: NestedDateTimeFilter;
-
     _max?: NestedDateTimeFilter;
-
-    max?: NestedDateTimeFilter;
 }

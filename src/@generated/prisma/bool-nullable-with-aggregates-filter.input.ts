@@ -10,13 +10,7 @@ export class BoolNullableWithAggregatesFilter {
 
     _count?: NestedIntNullableFilter;
 
-    count?: NestedIntNullableFilter;
-
     _min?: NestedBoolNullableFilter;
 
-    min?: NestedBoolNullableFilter;
-
     _max?: NestedBoolNullableFilter;
-
-    max?: NestedBoolNullableFilter;
 }

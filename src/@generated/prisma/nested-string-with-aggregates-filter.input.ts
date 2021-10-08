@@ -27,13 +27,7 @@ export class NestedStringWithAggregatesFilter {
 
     _count?: NestedIntFilter;
 
-    count?: NestedIntFilter;
-
     _min?: NestedStringFilter;
 
-    min?: NestedStringFilter;
-
     _max?: NestedStringFilter;
-
-    max?: NestedStringFilter;
 }

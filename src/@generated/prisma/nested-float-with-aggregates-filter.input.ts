@@ -21,21 +21,11 @@ export class NestedFloatWithAggregatesFilter {
 
     _count?: NestedIntFilter;
 
-    count?: NestedIntFilter;
-
     _avg?: NestedFloatFilter;
-
-    avg?: NestedFloatFilter;
 
     _sum?: NestedFloatFilter;
 
-    sum?: NestedFloatFilter;
-
     _min?: NestedFloatFilter;
 
-    min?: NestedFloatFilter;
-
     _max?: NestedFloatFilter;
-
-    max?: NestedFloatFilter;
 }

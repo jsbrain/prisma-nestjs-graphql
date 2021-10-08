@@ -8,21 +8,11 @@ export class AggregateUser {
 
     _count?: UserCountAggregate;
 
-    count?: UserCountAggregate;
-
     _avg?: UserAvgAggregate;
-
-    avg?: UserAvgAggregate;
 
     _sum?: UserSumAggregate;
 
-    sum?: UserSumAggregate;
-
     _min?: UserMinAggregate;
 
-    min?: UserMinAggregate;
-
     _max?: UserMaxAggregate;
-
-    max?: UserMaxAggregate;
 }

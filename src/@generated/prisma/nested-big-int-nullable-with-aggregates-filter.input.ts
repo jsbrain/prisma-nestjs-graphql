@@ -22,21 +22,11 @@ export class NestedBigIntNullableWithAggregatesFilter {
 
     _count?: NestedIntNullableFilter;
 
-    count?: NestedIntNullableFilter;
-
     _avg?: NestedFloatNullableFilter;
-
-    avg?: NestedFloatNullableFilter;
 
     _sum?: NestedBigIntNullableFilter;
 
-    sum?: NestedBigIntNullableFilter;
-
     _min?: NestedBigIntNullableFilter;
 
-    min?: NestedBigIntNullableFilter;
-
     _max?: NestedBigIntNullableFilter;
-
-    max?: NestedBigIntNullableFilter;
 }

@@ -23,21 +23,11 @@ export class DecimalNullableWithAggregatesFilter {
 
     _count?: NestedIntNullableFilter;
 
-    count?: NestedIntNullableFilter;
-
     _avg?: NestedDecimalNullableFilter;
-
-    avg?: NestedDecimalNullableFilter;
 
     _sum?: NestedDecimalNullableFilter;
 
-    sum?: NestedDecimalNullableFilter;
-
     _min?: NestedDecimalNullableFilter;
 
-    min?: NestedDecimalNullableFilter;
-
     _max?: NestedDecimalNullableFilter;
-
-    max?: NestedDecimalNullableFilter;
 }

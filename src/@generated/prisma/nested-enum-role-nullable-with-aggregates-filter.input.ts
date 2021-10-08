@@ -14,13 +14,7 @@ export class NestedEnumRoleNullableWithAggregatesFilter {
 
     _count?: NestedIntNullableFilter;
 
-    count?: NestedIntNullableFilter;
-
     _min?: NestedEnumRoleNullableFilter;
 
-    min?: NestedEnumRoleNullableFilter;
-
     _max?: NestedEnumRoleNullableFilter;
-
-    max?: NestedEnumRoleNullableFilter;
 }

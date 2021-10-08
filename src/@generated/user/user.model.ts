@@ -14,46 +14,30 @@ import { UserCount } from './user-count.output';
  */
 @ApiExtraModels()
 export class User {
-
     /** The id of the user */
     id!: string;
-
     @Type(()=>Number)
     age!: number;
-
     /**
      * This is a js doc comment!
      * And we can continue the comment on the next line as well :)
      */
     email!: string;
-
     /** User's name */
     @MinLength(3)
     @MinLength(3)
     @MaxLength(50, {message: `Oh no 😱. It's too long!`})
     name!: string;
-
     password!: string;
-
     bio!: string | null;
-
     image!: string | null;
-
     following!: Array<User>;
-
     followers!: Array<User>;
-
     favoriteArticles!: Array<Article>;
-
     articles!: Array<Article>;
-
     comments!: Array<Comment>;
-
     countComments!: number | null;
-
     rating!: number | null;
-
     role!: Role | null;
-
     _count!: UserCount;
 }
