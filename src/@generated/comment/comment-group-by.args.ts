@@ -7,6 +7,7 @@ import { CommentScalarWhereWithAggregatesInput } from './comment-scalar-where-wi
 import { CommentWhereInput } from './comment-where.input';
 
 export class CommentGroupByArgs {
+
     where?: CommentWhereInput;
 
     orderBy?: Array<CommentOrderByWithAggregationInput>;

@@ -7,6 +7,7 @@ import { TagScalarWhereWithAggregatesInput } from './tag-scalar-where-with-aggre
 import { TagWhereInput } from './tag-where.input';
 
 export class TagGroupByArgs {
+
     where?: TagWhereInput;
 
     orderBy?: Array<TagOrderByWithAggregationInput>;

@@ -4,6 +4,7 @@ import { CommentCreateWithoutArticleInput } from './comment-create-without-artic
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentCreateNestedManyWithoutArticleInput {
+
     create?: Array<CommentCreateWithoutArticleInput>;
 
     connectOrCreate?: Array<CommentCreateOrConnectWithoutArticleInput>;

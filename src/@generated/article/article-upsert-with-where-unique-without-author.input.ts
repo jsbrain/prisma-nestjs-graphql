@@ -3,6 +3,7 @@ import { ArticleUpdateWithoutAuthorInput } from './article-update-without-author
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleUpsertWithWhereUniqueWithoutAuthorInput {
+
     where!: ArticleWhereUniqueInput;
 
     update!: ArticleUpdateWithoutAuthorInput;

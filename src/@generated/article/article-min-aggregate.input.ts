@@ -1,4 +1,5 @@
 export class ArticleMinAggregateInput {
+
     id?: true;
 
     slug?: true;

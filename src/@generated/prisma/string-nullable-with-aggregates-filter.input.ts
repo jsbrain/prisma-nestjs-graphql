@@ -4,6 +4,7 @@ import { NestedStringNullableWithAggregatesFilter } from './nested-string-nullab
 import { QueryMode } from './query-mode.enum';
 
 export class StringNullableWithAggregatesFilter {
+
     equals?: string;
 
     in?: Array<string>;

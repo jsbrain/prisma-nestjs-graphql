@@ -2,6 +2,7 @@ import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { NestedStringNullableFilter } from './nested-string-nullable-filter.input';
 
 export class NestedStringNullableWithAggregatesFilter {
+
     equals?: string;
 
     in?: Array<string>;

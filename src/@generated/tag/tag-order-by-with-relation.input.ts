@@ -2,6 +2,7 @@ import { ArticleOrderByRelationAggregateInput } from '../article/article-order-b
 import { SortOrder } from '../prisma/sort-order.enum';
 
 export class TagOrderByWithRelationInput {
+
     id?: SortOrder;
 
     name?: SortOrder;

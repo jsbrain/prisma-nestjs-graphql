@@ -5,5 +5,5 @@ export enum CommentScalarFieldEnum {
     updatedAt = 'updatedAt',
     body = 'body',
     authorId = 'authorId',
-    articleId = 'articleId',
+    articleId = 'articleId'
 }

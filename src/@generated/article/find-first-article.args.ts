@@ -4,6 +4,7 @@ import { ArticleWhereInput } from './article-where.input';
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class FindFirstArticleArgs {
+
     where?: ArticleWhereInput;
 
     orderBy?: Array<ArticleOrderByWithRelationInput>;

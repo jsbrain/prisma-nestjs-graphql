@@ -2,6 +2,7 @@ import { NestedStringNullableFilter } from './nested-string-nullable-filter.inpu
 import { QueryMode } from './query-mode.enum';
 
 export class StringNullableFilter {
+
     equals?: string;
 
     in?: Array<string>;

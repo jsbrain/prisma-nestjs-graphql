@@ -9,6 +9,7 @@ import { DummySumAggregateInput } from './dummy-sum-aggregate.input';
 import { DummyWhereInput } from './dummy-where.input';
 
 export class DummyGroupByArgs {
+
     where?: DummyWhereInput;
 
     orderBy?: Array<DummyOrderByWithAggregationInput>;

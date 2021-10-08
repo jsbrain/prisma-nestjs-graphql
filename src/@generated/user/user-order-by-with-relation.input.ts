@@ -12,6 +12,7 @@ import { UserOrderByRelationAggregateInput } from './user-order-by-relation-aggr
  */
 @ApiExtraModels()
 export class UserOrderByWithRelationInput {
+
     /** The id of the user */
     id?: SortOrder;
 

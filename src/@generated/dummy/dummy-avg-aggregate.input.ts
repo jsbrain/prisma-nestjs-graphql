@@ -1,4 +1,5 @@
 export class DummyAvgAggregateInput {
+
     floaty?: true;
 
     int?: true;

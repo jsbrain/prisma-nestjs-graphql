@@ -11,6 +11,7 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class UserCreateNestedManyWithoutFollowingInput {
+
     create?: Array<UserCreateWithoutFollowingInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFollowingInput>;

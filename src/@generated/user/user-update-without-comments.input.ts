@@ -18,6 +18,7 @@ import { UserUpdateManyWithoutFollowingInput } from './user-update-many-without-
  */
 @ApiExtraModels()
 export class UserUpdateWithoutCommentsInput {
+
     /** The id of the user */
     id?: StringFieldUpdateOperationsInput;
 

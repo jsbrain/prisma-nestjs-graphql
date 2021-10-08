@@ -3,6 +3,7 @@ import { TagCreateNestedManyWithoutArticlesInput } from '../tag/tag-create-neste
 import { UserCreateNestedManyWithoutFavoriteArticlesInput } from '../user/user-create-nested-many-without-favorite-articles.input';
 
 export class ArticleCreateWithoutAuthorInput {
+
     id?: string;
 
     slug!: string;

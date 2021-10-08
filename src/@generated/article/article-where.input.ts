@@ -8,6 +8,7 @@ import { UserListRelationFilter } from '../user/user-list-relation-filter.input'
 import { UserWhereInput } from '../user/user-where.input';
 
 export class ArticleWhereInput {
+
     AND?: Array<ArticleWhereInput>;
 
     OR?: Array<ArticleWhereInput>;

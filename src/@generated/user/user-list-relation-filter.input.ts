@@ -9,6 +9,7 @@ import { UserWhereInput } from './user-where.input';
  */
 @ApiExtraModels()
 export class UserListRelationFilter {
+
     every?: UserWhereInput;
 
     some?: UserWhereInput;

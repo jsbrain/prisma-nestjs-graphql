@@ -1,6 +1,7 @@
 import { NestedDateTimeFilter } from './nested-date-time-filter.input';
 
 export class DateTimeFilter {
+
     equals?: Date | string;
 
     in?: Array<Date> | Array<string>;

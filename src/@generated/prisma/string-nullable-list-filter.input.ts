@@ -1,4 +1,5 @@
 export class StringNullableListFilter {
+
     equals?: Array<string>;
 
     has?: string;

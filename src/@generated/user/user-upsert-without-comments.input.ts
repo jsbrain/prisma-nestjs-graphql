@@ -10,6 +10,7 @@ import { UserUpdateWithoutCommentsInput } from './user-update-without-comments.i
  */
 @ApiExtraModels()
 export class UserUpsertWithoutCommentsInput {
+
     update!: UserUpdateWithoutCommentsInput;
 
     create!: UserCreateWithoutCommentsInput;

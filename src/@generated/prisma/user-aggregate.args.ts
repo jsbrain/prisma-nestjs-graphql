@@ -8,6 +8,7 @@ import { UserWhereInput } from '../user/user-where.input';
 import { UserWhereUniqueInput } from '../user/user-where-unique.input';
 
 export class UserAggregateArgs {
+
     where?: UserWhereInput;
 
     orderBy?: Array<UserOrderByWithRelationInput>;

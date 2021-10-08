@@ -7,6 +7,7 @@ import { ArticleUpsertWithWhereUniqueWithoutTagsInput } from './article-upsert-w
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleUpdateManyWithoutTagsInput {
+
     create?: Array<ArticleCreateWithoutTagsInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutTagsInput>;

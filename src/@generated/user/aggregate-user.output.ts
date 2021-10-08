@@ -5,6 +5,7 @@ import { UserMinAggregate } from './user-min-aggregate.output';
 import { UserSumAggregate } from './user-sum-aggregate.output';
 
 export class AggregateUser {
+
     _count?: UserCountAggregate;
 
     _avg?: UserAvgAggregate;

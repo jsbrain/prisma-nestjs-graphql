@@ -12,6 +12,7 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class FindManyUserArgs {
+
     where?: UserWhereInput;
 
     orderBy?: Array<UserOrderByWithRelationInput>;

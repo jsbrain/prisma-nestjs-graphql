@@ -8,6 +8,7 @@ import { CommentUpsertWithWhereUniqueWithoutArticleInput } from './comment-upser
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentUpdateManyWithoutArticleInput {
+
     create?: Array<CommentCreateWithoutArticleInput>;
 
     connectOrCreate?: Array<CommentCreateOrConnectWithoutArticleInput>;

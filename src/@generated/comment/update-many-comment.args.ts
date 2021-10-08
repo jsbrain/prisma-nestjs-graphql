@@ -2,6 +2,7 @@ import { CommentUpdateManyMutationInput } from './comment-update-many-mutation.i
 import { CommentWhereInput } from './comment-where.input';
 
 export class UpdateManyCommentArgs {
+
     data!: CommentUpdateManyMutationInput;
 
     where?: CommentWhereInput;

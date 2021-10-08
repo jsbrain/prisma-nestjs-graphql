@@ -7,6 +7,7 @@ import { TagUpdateManyWithoutArticlesInput } from '../tag/tag-update-many-withou
 import { UserUpdateOneRequiredWithoutArticlesInput } from '../user/user-update-one-required-without-articles.input';
 
 export class ArticleUpdateWithoutFavoritedByInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     slug?: StringFieldUpdateOperationsInput;

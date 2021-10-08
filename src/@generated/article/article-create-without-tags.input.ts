@@ -3,6 +3,7 @@ import { UserCreateNestedManyWithoutFavoriteArticlesInput } from '../user/user-c
 import { UserCreateNestedOneWithoutArticlesInput } from '../user/user-create-nested-one-without-articles.input';
 
 export class ArticleCreateWithoutTagsInput {
+
     id?: string;
 
     slug!: string;

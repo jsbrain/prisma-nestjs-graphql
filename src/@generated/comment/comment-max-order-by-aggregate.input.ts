@@ -1,6 +1,7 @@
 import { SortOrder } from '../prisma/sort-order.enum';
 
 export class CommentMaxOrderByAggregateInput {
+
     id?: SortOrder;
 
     createdAt?: SortOrder;

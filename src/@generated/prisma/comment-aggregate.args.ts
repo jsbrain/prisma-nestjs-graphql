@@ -6,6 +6,7 @@ import { CommentWhereInput } from '../comment/comment-where.input';
 import { CommentWhereUniqueInput } from '../comment/comment-where-unique.input';
 
 export class CommentAggregateArgs {
+
     where?: CommentWhereInput;
 
     orderBy?: Array<CommentOrderByWithRelationInput>;

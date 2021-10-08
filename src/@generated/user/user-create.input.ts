@@ -1,6 +1,6 @@
 import { ApiExtraModels } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { MaxLength, MinLength } from 'class-validator';
+import { MaxLength,MinLength  } from 'class-validator';
 
 import { ArticleCreateNestedManyWithoutAuthorInput } from '../article/article-create-nested-many-without-author.input';
 import { ArticleCreateNestedManyWithoutFavoritedByInput } from '../article/article-create-nested-many-without-favorited-by.input';
@@ -16,10 +16,11 @@ import { UserCreateNestedManyWithoutFollowingInput } from './user-create-nested-
  */
 @ApiExtraModels()
 export class UserCreateInput {
+
     /** The id of the user */
     id?: string;
 
-    @Type(() => Number)
+    @Type(()=>Number)
     age?: number;
 
     /**
@@ -31,7 +32,7 @@ export class UserCreateInput {
     /** User's name */
     @MinLength(3)
     @MinLength(3)
-    @MaxLength(50, { message: `Oh no 😱. It's too long!` })
+    @MaxLength(50, {message: `Oh no 😱. It's too long!`})
     name!: string;
 
     password!: string;

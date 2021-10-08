@@ -9,5 +9,5 @@ export enum ArticleScalarFieldEnum {
     updatedAt = 'updatedAt',
     favoritesCount = 'favoritesCount',
     authorId = 'authorId',
-    active = 'active',
+    active = 'active'
 }

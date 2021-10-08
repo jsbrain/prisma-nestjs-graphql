@@ -8,6 +8,7 @@ import { UserUpdateManyWithoutFavoriteArticlesInput } from '../user/user-update-
 import { UserUpdateOneRequiredWithoutArticlesInput } from '../user/user-update-one-required-without-articles.input';
 
 export class ArticleUpdateInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     slug?: StringFieldUpdateOperationsInput;

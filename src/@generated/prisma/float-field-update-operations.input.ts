@@ -1,4 +1,5 @@
 export class FloatFieldUpdateOperationsInput {
+
     set?: number;
 
     increment?: number;

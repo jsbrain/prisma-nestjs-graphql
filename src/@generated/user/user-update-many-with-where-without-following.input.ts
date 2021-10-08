@@ -10,6 +10,7 @@ import { UserUpdateManyMutationInput } from './user-update-many-mutation.input';
  */
 @ApiExtraModels()
 export class UserUpdateManyWithWhereWithoutFollowingInput {
+
     where!: UserScalarWhereInput;
 
     data!: UserUpdateManyMutationInput;

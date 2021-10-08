@@ -3,6 +3,7 @@ import { CommentUpdateWithoutArticleInput } from './comment-update-without-artic
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentUpsertWithWhereUniqueWithoutArticleInput {
+
     where!: CommentWhereUniqueInput;
 
     update!: CommentUpdateWithoutArticleInput;

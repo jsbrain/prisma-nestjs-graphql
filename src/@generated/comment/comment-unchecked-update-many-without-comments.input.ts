@@ -3,6 +3,7 @@ import { NullableStringFieldUpdateOperationsInput } from '../prisma/nullable-str
 import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-operations.input';
 
 export class CommentUncheckedUpdateManyWithoutCommentsInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     createdAt?: DateTimeFieldUpdateOperationsInput;

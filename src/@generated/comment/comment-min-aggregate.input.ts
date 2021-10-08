@@ -1,4 +1,5 @@
 export class CommentMinAggregateInput {
+
     id?: true;
 
     createdAt?: true;

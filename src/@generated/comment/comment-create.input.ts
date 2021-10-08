@@ -2,6 +2,7 @@ import { ArticleCreateNestedOneWithoutCommentsInput } from '../article/article-c
 import { UserCreateNestedOneWithoutCommentsInput } from '../user/user-create-nested-one-without-comments.input';
 
 export class CommentCreateInput {
+
     id?: string;
 
     createdAt?: Date | string;

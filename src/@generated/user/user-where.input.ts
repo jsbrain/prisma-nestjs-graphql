@@ -17,6 +17,7 @@ import { UserListRelationFilter } from './user-list-relation-filter.input';
  */
 @ApiExtraModels()
 export class UserWhereInput {
+
     AND?: Array<UserWhereInput>;
 
     OR?: Array<UserWhereInput>;

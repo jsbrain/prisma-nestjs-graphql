@@ -14,6 +14,7 @@ import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-
  */
 @ApiExtraModels()
 export class UserUncheckedUpdateManyInput {
+
     /** The id of the user */
     id?: StringFieldUpdateOperationsInput;
 

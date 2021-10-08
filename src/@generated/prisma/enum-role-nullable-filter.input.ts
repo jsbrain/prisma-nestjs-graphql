@@ -2,6 +2,7 @@ import { NestedEnumRoleNullableFilter } from './nested-enum-role-nullable-filter
 import { Role } from './role.enum';
 
 export class EnumRoleNullableFilter {
+
     equals?: Role;
 
     in?: Array<Role>;

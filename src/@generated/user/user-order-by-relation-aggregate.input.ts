@@ -9,5 +9,6 @@ import { SortOrder } from '../prisma/sort-order.enum';
  */
 @ApiExtraModels()
 export class UserOrderByRelationAggregateInput {
+
     _count?: SortOrder;
 }

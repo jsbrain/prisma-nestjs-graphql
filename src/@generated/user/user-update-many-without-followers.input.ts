@@ -15,6 +15,7 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class UserUpdateManyWithoutFollowersInput {
+
     create?: Array<UserCreateWithoutFollowersInput>;
 
     connectOrCreate?: Array<UserCreateOrConnectWithoutFollowersInput>;

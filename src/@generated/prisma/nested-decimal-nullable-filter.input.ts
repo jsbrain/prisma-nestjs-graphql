@@ -1,6 +1,7 @@
 import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
 
 export class NestedDecimalNullableFilter {
+
     equals?: any;
 
     in?: Array<any>;

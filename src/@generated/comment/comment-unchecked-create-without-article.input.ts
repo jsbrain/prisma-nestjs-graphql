@@ -1,4 +1,5 @@
 export class CommentUncheckedCreateWithoutArticleInput {
+
     id?: string;
 
     createdAt?: Date | string;

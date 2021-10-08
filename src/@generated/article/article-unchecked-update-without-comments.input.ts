@@ -4,6 +4,7 @@ import { NullableBoolFieldUpdateOperationsInput } from '../prisma/nullable-bool-
 import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-operations.input';
 
 export class ArticleUncheckedUpdateWithoutCommentsInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     slug?: StringFieldUpdateOperationsInput;

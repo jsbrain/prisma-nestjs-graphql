@@ -7,6 +7,7 @@ import { ArticleUpsertWithWhereUniqueWithoutFavoritedByInput } from './article-u
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleUpdateManyWithoutFavoritedByInput {
+
     create?: Array<ArticleCreateWithoutFavoritedByInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutFavoritedByInput>;

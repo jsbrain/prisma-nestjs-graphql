@@ -7,6 +7,7 @@ import { TagUpsertWithWhereUniqueWithoutArticlesInput } from './tag-upsert-with-
 import { TagWhereUniqueInput } from './tag-where-unique.input';
 
 export class TagUpdateManyWithoutArticlesInput {
+
     create?: Array<TagCreateWithoutArticlesInput>;
 
     connectOrCreate?: Array<TagCreateOrConnectWithoutArticlesInput>;

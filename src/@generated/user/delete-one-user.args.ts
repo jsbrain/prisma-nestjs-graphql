@@ -9,5 +9,6 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class DeleteOneUserArgs {
+
     where!: UserWhereUniqueInput;
 }

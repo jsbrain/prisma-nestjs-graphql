@@ -3,6 +3,7 @@ import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 import { Role } from './role.enum';
 
 export class NestedEnumRoleNullableWithAggregatesFilter {
+
     equals?: Role;
 
     in?: Array<Role>;

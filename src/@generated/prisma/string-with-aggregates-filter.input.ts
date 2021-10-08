@@ -4,6 +4,7 @@ import { NestedStringWithAggregatesFilter } from './nested-string-with-aggregate
 import { QueryMode } from './query-mode.enum';
 
 export class StringWithAggregatesFilter {
+
     equals?: string;
 
     in?: Array<string>;

@@ -1,4 +1,5 @@
 export class NestedFloatFilter {
+
     equals?: number;
 
     in?: Array<number>;

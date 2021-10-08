@@ -3,6 +3,7 @@ import { GraphQLDecimal } from 'prisma-graphql-type-decimal';
 import { DummyCreatefriendsInput } from '../prisma/dummy-createfriends.input';
 
 export class DummyUncheckedCreateInput {
+
     id!: string;
 
     created?: Date | string;

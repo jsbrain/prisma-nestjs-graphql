@@ -3,6 +3,7 @@ import { CommentUpdateWithoutAuthorInput } from './comment-update-without-author
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentUpsertWithWhereUniqueWithoutAuthorInput {
+
     where!: CommentWhereUniqueInput;
 
     update!: CommentUpdateWithoutAuthorInput;

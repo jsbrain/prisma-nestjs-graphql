@@ -9,6 +9,7 @@ import { ArticleSumAggregateInput } from './article-sum-aggregate.input';
 import { ArticleWhereInput } from './article-where.input';
 
 export class ArticleGroupByArgs {
+
     where?: ArticleWhereInput;
 
     orderBy?: Array<ArticleOrderByWithAggregationInput>;

@@ -1,4 +1,5 @@
 export class DummySumAggregateInput {
+
     floaty?: true;
 
     int?: true;

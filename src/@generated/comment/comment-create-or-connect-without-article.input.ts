@@ -2,6 +2,7 @@ import { CommentCreateWithoutArticleInput } from './comment-create-without-artic
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentCreateOrConnectWithoutArticleInput {
+
     where!: CommentWhereUniqueInput;
 
     create!: CommentCreateWithoutArticleInput;

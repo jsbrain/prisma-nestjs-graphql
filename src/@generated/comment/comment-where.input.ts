@@ -5,6 +5,7 @@ import { StringNullableFilter } from '../prisma/string-nullable-filter.input';
 import { UserWhereInput } from '../user/user-where.input';
 
 export class CommentWhereInput {
+
     AND?: Array<CommentWhereInput>;
 
     OR?: Array<CommentWhereInput>;

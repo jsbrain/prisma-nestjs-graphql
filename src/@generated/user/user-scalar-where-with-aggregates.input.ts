@@ -14,6 +14,7 @@ import { StringWithAggregatesFilter } from '../prisma/string-with-aggregates-fil
  */
 @ApiExtraModels()
 export class UserScalarWhereWithAggregatesInput {
+
     AND?: Array<UserScalarWhereWithAggregatesInput>;
 
     OR?: Array<UserScalarWhereWithAggregatesInput>;

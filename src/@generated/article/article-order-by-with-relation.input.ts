@@ -5,6 +5,7 @@ import { UserOrderByRelationAggregateInput } from '../user/user-order-by-relatio
 import { UserOrderByWithRelationInput } from '../user/user-order-by-with-relation.input';
 
 export class ArticleOrderByWithRelationInput {
+
     id?: SortOrder;
 
     slug?: SortOrder;

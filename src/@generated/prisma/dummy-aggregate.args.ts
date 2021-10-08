@@ -8,6 +8,7 @@ import { DummyWhereInput } from '../dummy/dummy-where.input';
 import { DummyWhereUniqueInput } from '../dummy/dummy-where-unique.input';
 
 export class DummyAggregateArgs {
+
     where?: DummyWhereInput;
 
     orderBy?: Array<DummyOrderByWithRelationInput>;

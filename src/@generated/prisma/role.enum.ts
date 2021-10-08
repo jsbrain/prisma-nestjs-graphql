@@ -1,5 +1,5 @@
 /** User role 🤷🏻‍♂️ */
 export enum Role {
     USER = 'USER',
-    ADMIN = 'ADMIN',
+    ADMIN = 'ADMIN'
 }

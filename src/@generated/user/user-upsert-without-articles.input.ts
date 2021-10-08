@@ -10,6 +10,7 @@ import { UserUpdateWithoutArticlesInput } from './user-update-without-articles.i
  */
 @ApiExtraModels()
 export class UserUpsertWithoutArticlesInput {
+
     update!: UserUpdateWithoutArticlesInput;
 
     create!: UserCreateWithoutArticlesInput;

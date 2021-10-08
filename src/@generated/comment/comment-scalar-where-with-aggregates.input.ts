@@ -3,6 +3,7 @@ import { StringNullableWithAggregatesFilter } from '../prisma/string-nullable-wi
 import { StringWithAggregatesFilter } from '../prisma/string-with-aggregates-filter.input';
 
 export class CommentScalarWhereWithAggregatesInput {
+
     AND?: Array<CommentScalarWhereWithAggregatesInput>;
 
     OR?: Array<CommentScalarWhereWithAggregatesInput>;

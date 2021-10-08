@@ -8,6 +8,7 @@ import { CommentUpsertWithWhereUniqueWithoutAuthorInput } from './comment-upsert
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentUncheckedUpdateManyWithoutAuthorInput {
+
     create?: Array<CommentCreateWithoutAuthorInput>;
 
     connectOrCreate?: Array<CommentCreateOrConnectWithoutAuthorInput>;

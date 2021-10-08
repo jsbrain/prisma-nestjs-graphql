@@ -4,6 +4,7 @@ import { IntFilter } from '../prisma/int-filter.input';
 import { StringFilter } from '../prisma/string-filter.input';
 
 export class ArticleScalarWhereInput {
+
     AND?: Array<ArticleScalarWhereInput>;
 
     OR?: Array<ArticleScalarWhereInput>;

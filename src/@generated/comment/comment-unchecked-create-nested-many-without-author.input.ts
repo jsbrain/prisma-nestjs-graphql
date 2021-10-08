@@ -4,6 +4,7 @@ import { CommentCreateWithoutAuthorInput } from './comment-create-without-author
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class CommentUncheckedCreateNestedManyWithoutAuthorInput {
+
     create?: Array<CommentCreateWithoutAuthorInput>;
 
     connectOrCreate?: Array<CommentCreateOrConnectWithoutAuthorInput>;

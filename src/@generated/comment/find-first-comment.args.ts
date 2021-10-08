@@ -4,6 +4,7 @@ import { CommentWhereInput } from './comment-where.input';
 import { CommentWhereUniqueInput } from './comment-where-unique.input';
 
 export class FindFirstCommentArgs {
+
     where?: CommentWhereInput;
 
     orderBy?: Array<CommentOrderByWithRelationInput>;

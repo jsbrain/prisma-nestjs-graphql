@@ -10,6 +10,7 @@ import { StringNullableListFilter } from '../prisma/string-nullable-list-filter.
 import { StringWithAggregatesFilter } from '../prisma/string-with-aggregates-filter.input';
 
 export class DummyScalarWhereWithAggregatesInput {
+
     AND?: Array<DummyScalarWhereWithAggregatesInput>;
 
     OR?: Array<DummyScalarWhereWithAggregatesInput>;

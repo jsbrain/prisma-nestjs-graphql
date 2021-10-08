@@ -2,6 +2,7 @@ import { ArticleUpdateWithoutFavoritedByInput } from './article-update-without-f
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleUpdateWithWhereUniqueWithoutFavoritedByInput {
+
     where!: ArticleWhereUniqueInput;
 
     data!: ArticleUpdateWithoutFavoritedByInput;

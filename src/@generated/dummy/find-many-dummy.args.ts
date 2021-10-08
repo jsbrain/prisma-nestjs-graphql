@@ -4,6 +4,7 @@ import { DummyWhereInput } from './dummy-where.input';
 import { DummyWhereUniqueInput } from './dummy-where-unique.input';
 
 export class FindManyDummyArgs {
+
     where?: DummyWhereInput;
 
     orderBy?: Array<DummyOrderByWithRelationInput>;

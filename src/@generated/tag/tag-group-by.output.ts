@@ -3,6 +3,7 @@ import { TagMaxAggregate } from './tag-max-aggregate.output';
 import { TagMinAggregate } from './tag-min-aggregate.output';
 
 export class TagGroupBy {
+
     id!: string;
 
     name!: string;

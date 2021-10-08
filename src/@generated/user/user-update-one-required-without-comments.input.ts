@@ -13,6 +13,7 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class UserUpdateOneRequiredWithoutCommentsInput {
+
     create?: UserCreateWithoutCommentsInput;
 
     connectOrCreate?: UserCreateOrConnectWithoutCommentsInput;

@@ -3,6 +3,7 @@ import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-
 import { UserUpdateOneRequiredWithoutCommentsInput } from '../user/user-update-one-required-without-comments.input';
 
 export class CommentUpdateWithoutArticleInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     createdAt?: DateTimeFieldUpdateOperationsInput;

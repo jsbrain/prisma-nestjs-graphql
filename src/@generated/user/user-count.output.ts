@@ -1,4 +1,5 @@
 export class UserCount {
+
     following!: number;
 
     followers!: number;

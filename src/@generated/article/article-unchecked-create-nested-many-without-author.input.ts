@@ -4,6 +4,7 @@ import { ArticleCreateWithoutAuthorInput } from './article-create-without-author
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleUncheckedCreateNestedManyWithoutAuthorInput {
+
     create?: Array<ArticleCreateWithoutAuthorInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutAuthorInput>;

@@ -1,4 +1,5 @@
 export class ArticleMinAggregate {
+
     id?: string;
 
     slug?: string;

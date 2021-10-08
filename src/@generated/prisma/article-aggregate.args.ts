@@ -8,6 +8,7 @@ import { ArticleWhereInput } from '../article/article-where.input';
 import { ArticleWhereUniqueInput } from '../article/article-where-unique.input';
 
 export class ArticleAggregateArgs {
+
     where?: ArticleWhereInput;
 
     orderBy?: Array<ArticleOrderByWithRelationInput>;

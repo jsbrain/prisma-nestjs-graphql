@@ -9,5 +9,6 @@ import { UserWhereInput } from './user-where.input';
  */
 @ApiExtraModels()
 export class DeleteManyUserArgs {
+
     where?: UserWhereInput;
 }

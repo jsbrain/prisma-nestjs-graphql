@@ -1,5 +1,5 @@
 /** */
 export enum NullableJsonNullValueInput {
     DatabaseNull = 'DbNull',
-    JsonNull = 'JsonNull',
+    JsonNull = 'JsonNull'
 }

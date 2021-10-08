@@ -9,6 +9,7 @@ import { SortOrder } from '../prisma/sort-order.enum';
  */
 @ApiExtraModels()
 export class UserMaxOrderByAggregateInput {
+
     /** The id of the user */
     id?: SortOrder;
 

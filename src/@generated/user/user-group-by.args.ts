@@ -17,6 +17,7 @@ import { UserWhereInput } from './user-where.input';
  */
 @ApiExtraModels()
 export class UserGroupByArgs {
+
     where?: UserWhereInput;
 
     orderBy?: Array<UserOrderByWithAggregationInput>;

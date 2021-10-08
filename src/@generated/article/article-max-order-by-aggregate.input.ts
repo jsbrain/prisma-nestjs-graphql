@@ -1,6 +1,7 @@
 import { SortOrder } from '../prisma/sort-order.enum';
 
 export class ArticleMaxOrderByAggregateInput {
+
     id?: SortOrder;
 
     slug?: SortOrder;

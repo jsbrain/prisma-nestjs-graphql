@@ -8,6 +8,7 @@ import { ArticleUpsertWithWhereUniqueWithoutAuthorInput } from './article-upsert
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleUpdateManyWithoutAuthorInput {
+
     create?: Array<ArticleCreateWithoutAuthorInput>;
 
     connectOrCreate?: Array<ArticleCreateOrConnectWithoutAuthorInput>;

@@ -10,6 +10,7 @@ import { UserWhereUniqueInput } from './user-where-unique.input';
  */
 @ApiExtraModels()
 export class UserUpdateWithWhereUniqueWithoutFollowersInput {
+
     where!: UserWhereUniqueInput;
 
     data!: UserUpdateWithoutFollowersInput;

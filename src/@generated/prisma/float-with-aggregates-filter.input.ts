@@ -3,6 +3,7 @@ import { NestedFloatWithAggregatesFilter } from './nested-float-with-aggregates-
 import { NestedIntFilter } from './nested-int-filter.input';
 
 export class FloatWithAggregatesFilter {
+
     equals?: number;
 
     in?: Array<number>;

@@ -3,6 +3,7 @@ import { NestedBytesNullableWithAggregatesFilter } from './nested-bytes-nullable
 import { NestedIntNullableFilter } from './nested-int-nullable-filter.input';
 
 export class BytesNullableWithAggregatesFilter {
+
     equals?: Buffer;
 
     not?: NestedBytesNullableWithAggregatesFilter;

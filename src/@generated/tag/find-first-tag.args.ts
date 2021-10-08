@@ -4,6 +4,7 @@ import { TagWhereInput } from './tag-where.input';
 import { TagWhereUniqueInput } from './tag-where-unique.input';
 
 export class FindFirstTagArgs {
+
     where?: TagWhereInput;
 
     orderBy?: Array<TagOrderByWithRelationInput>;

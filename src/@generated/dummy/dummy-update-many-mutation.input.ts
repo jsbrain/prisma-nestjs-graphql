@@ -9,6 +9,7 @@ import { NullableIntFieldUpdateOperationsInput } from '../prisma/nullable-int-fi
 import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-operations.input';
 
 export class DummyUpdateManyMutationInput {
+
     id?: StringFieldUpdateOperationsInput;
 
     created?: DateTimeFieldUpdateOperationsInput;

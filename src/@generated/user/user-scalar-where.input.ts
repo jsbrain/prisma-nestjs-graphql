@@ -14,6 +14,7 @@ import { StringNullableFilter } from '../prisma/string-nullable-filter.input';
  */
 @ApiExtraModels()
 export class UserScalarWhereInput {
+
     AND?: Array<UserScalarWhereInput>;
 
     OR?: Array<UserScalarWhereInput>;

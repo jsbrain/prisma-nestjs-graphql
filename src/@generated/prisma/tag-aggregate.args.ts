@@ -6,6 +6,7 @@ import { TagWhereInput } from '../tag/tag-where.input';
 import { TagWhereUniqueInput } from '../tag/tag-where-unique.input';
 
 export class TagAggregateArgs {
+
     where?: TagWhereInput;
 
     orderBy?: Array<TagOrderByWithRelationInput>;

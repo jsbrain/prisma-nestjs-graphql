@@ -5,6 +5,7 @@ import { ArticleUpsertWithoutCommentsInput } from './article-upsert-without-comm
 import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 export class ArticleUpdateOneWithoutCommentsInput {
+
     create?: ArticleCreateWithoutCommentsInput;
 
     connectOrCreate?: ArticleCreateOrConnectWithoutCommentsInput;

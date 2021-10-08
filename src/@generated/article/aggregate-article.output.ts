@@ -5,6 +5,7 @@ import { ArticleMinAggregate } from './article-min-aggregate.output';
 import { ArticleSumAggregate } from './article-sum-aggregate.output';
 
 export class AggregateArticle {
+
     _count?: ArticleCountAggregate;
 
     _avg?: ArticleAvgAggregate;
